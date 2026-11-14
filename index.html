@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ESLA Abogados Consultores</title>
+<meta name="description" content="ESLA Abogados Consultores — Derecho mercantil, corporativo y fiduciario, litigación civil y contractual y servicios notariales. Av. Abraham Lincoln No. 605, Naco, Santo Domingo de Guzmán, Distrito Nacional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Cinzel:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: white header with a slim top bar; full-bleed tinted photo slider with centered headline; alternating white, mist and navy bands, centered section titles, on a 76rem column */
+:root {
+  /* Brand colors sampled from eslard.com and the ESLA logo */
+  --navy: #1F2B48;
+  --navy-deep: #151E33;
+  --gold: #AE7B4A;
+  --gold-text: #8F6337;
+  --gold-soft: #D9B48C;
+  --copper: #C07D46;
+  --paper: #FFFFFF;
+  --mist: #F1F3F6;
+  --tint: #EEF0F5;
+  --ink: #1F2B48;
+  --muted: #5C6375;
+  --line: #E1E4EB;
+  --on-dark: #F2F3F6;
+  --on-dark-muted: #B4BBCB;
+  --on-dark-line: rgba(255, 255, 255, 0.16);
+  --pend-bg: #FBEBC2;
+  --pend-fg: #5A4100;
+  --wa: #1FA855;
+  --f-brand: "Cinzel", "Trajan Pro", Georgia, serif;
+  --f-head: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --maxw: 76rem;
+  /* Single light look on purpose: the brand colors read the same for every visitor */
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 1rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--navy-deep); }
+[data-lang="es"] [lang="en"], [data-lang="en"] [lang="es"] { display: none !important; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+img { display: block; max-width: 100%; }
+
+.wrap {
+  max-width: var(--maxw); margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 760px) { .wrap { padding-left: max(40px, env(safe-area-inset-left, 0px)); padding-right: max(40px, env(safe-area-inset-right, 0px)); } }
+.pend { background: var(--pend-bg); color: var(--pend-fg); padding: 0 0.3em; border-radius: 3px; }
+
+h1, h2, h3 { font-family: var(--f-head); font-weight: 400; text-wrap: balance; margin: 0; letter-spacing: -0.005em; }
+.title { text-align: center; font-size: clamp(2rem, 3.6vw, 2.75rem); line-height: 1.15; }
+.title-left { font-size: clamp(1.75rem, 2.6vw, 2.125rem); line-height: 1.2; }
+.intro { text-align: center; max-width: 46rem; margin: 1.25rem auto 0; color: var(--muted); }
+.section { padding-block: clamp(4rem, 8vw, 6.5rem); }
+.section.mist { background: var(--mist); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; text-decoration: none; cursor: pointer;
+  font: 600 0.8125rem/1 var(--f-body); letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 1.1rem 2.25rem; border: 1px solid transparent; transition: background .2s, color .2s, border-color .2s;
+}
+.btn svg { width: 1.05rem; height: 1.05rem; }
+.btn-gold { background: var(--gold); color: #FFFFFF; min-width: 15rem; }
+.btn-gold:hover { background: var(--copper); }
+.btn-navy { background: var(--navy); color: #FFFFFF; }
+.btn-navy:hover { background: var(--navy-deep); }
+.btn-ghost { border-color: rgba(255, 255, 255, 0.6); color: #FFFFFF; }
+.btn-ghost:hover { background: #FFFFFF; color: var(--navy); }
+.center { text-align: center; }
+
+/* Top bar */
+.topbar { background: var(--navy-deep); color: var(--on-dark-muted); font-size: 0.75rem; padding-top: env(safe-area-inset-top, 0px); }
+.topbar .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 1.75rem; min-height: 2.25rem; }
+.topbar span { display: inline-flex; align-items: center; gap: 0.45rem; white-space: nowrap; }
+.topbar svg { width: 0.9rem; height: 0.9rem; color: var(--gold-soft); }
+.topbar .spacer { margin-left: auto; }
+.social { display: inline-flex; align-items: center; gap: 0.45rem; text-decoration: none; color: inherit; white-space: nowrap; }
+.social:hover { color: #FFFFFF; }
+footer .social { margin-top: 1.25rem; color: #FFFFFF; font-weight: 600; }
+footer .social svg { width: 1.25rem; height: 1.25rem; color: var(--gold-soft); }
+.lang { display: inline-flex; gap: 0.2rem; }
+.lang button { font: 700 0.6875rem/1 var(--f-body); letter-spacing: 0.1em; border: 0; background: transparent; color: var(--on-dark-muted); padding: 0.4rem; cursor: pointer; }
+.lang button[aria-pressed="true"] { color: #FFFFFF; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 759px) { .topbar .hide-sm { display: none; } }
+
+/* Header */
+.site-head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--paper); box-shadow: 0 1px 0 var(--line); transition: box-shadow .2s; }
+.site-head.scrolled { box-shadow: 0 1px 0 var(--line), 0 10px 30px rgba(21, 30, 51, 0.08); }
+.site-head .bar { display: flex; align-items: center; gap: 1.5rem; min-height: 5.25rem; }
+.brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; margin-right: auto; color: var(--navy); }
+.brand svg { width: 2.9rem; height: 2.9rem; flex: none; }
+.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.brand-text b { font: 700 1.8rem/1 var(--f-brand); letter-spacing: 0.08em; }
+.brand-text span { white-space: nowrap; font: 500 0.62rem/1 var(--f-brand); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 0.3rem; color: var(--gold-text); }
+.nav { display: flex; gap: 1.3rem; }
+.nav a { white-space: nowrap; text-decoration: none; font: 500 0.8125rem/1 var(--f-body); letter-spacing: 0.13em; text-transform: uppercase; color: var(--navy); padding-block: 0.6rem; border-bottom: 2px solid transparent; transition: border-color .2s, color .2s; }
+.nav a:hover { border-color: var(--gold); color: var(--gold-text); }
+.menu-btn { display: none; background: transparent; border: 0; color: var(--navy); padding: 0.5rem; cursor: pointer; }
+.menu-btn svg { width: 1.7rem; height: 1.7rem; }
+@media (max-width: 1239px) {
+  .menu-btn { display: inline-flex; }
+  .nav {
+    display: none; position: absolute; left: 0; right: 0; top: 100%;
+    flex-direction: column; gap: 0; background: var(--paper);
+    padding: 0.25rem max(16px, env(safe-area-inset-right, 0px)) 1rem max(16px, env(safe-area-inset-left, 0px));
+    box-shadow: 0 16px 30px rgba(21, 30, 51, 0.12);
+  }
+  .nav.open { display: flex; }
+  .nav a { padding-block: 1rem; border-bottom: 1px solid var(--line); }
+}
+
+/* Hero slider */
+.slider { position: relative; background: var(--navy-deep); color: #FFFFFF; min-height: clamp(30rem, 72vh, 44rem); display: grid; overflow: hidden; }
+.slide { grid-area: 1 / 1; position: relative; display: grid; place-items: center; text-align: center; transition: opacity .9s ease; }
+.slide[aria-hidden="true"] { opacity: 0; pointer-events: none; }
+.slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.slide::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21, 30, 51, 0.62), rgba(21, 30, 51, 0.78)); }
+.slide .wrap { position: relative; z-index: 1; padding-block: 5rem 6rem; display: grid; justify-items: center; }
+.slide .kicker { font: 600 0.75rem/1.4 var(--f-body); letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-soft); margin: 0 0 1.25rem; }
+.slide h1, .slide h2 { font-family: var(--f-head); font-weight: 400; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.08; max-width: 16ch; }
+.slide p.sub { font-size: clamp(1rem, 1.6vw, 1.25rem); color: #DCE0EA; max-width: 38rem; margin: 1.5rem 0 2.25rem; }
+.dots { position: absolute; z-index: 2; left: 0; right: 0; bottom: 1.75rem; display: flex; justify-content: center; gap: 0.6rem; }
+.dots button { width: 0.8rem; height: 0.8rem; border-radius: 50%; border: 1.5px solid #FFFFFF; background: transparent; padding: 0; cursor: pointer; }
+.dots button[aria-current="true"] { background: #FFFFFF; }
+.arrow { position: absolute; z-index: 2; top: 50%; transform: translateY(-50%); width: 3rem; height: 3rem; border: 0; background: rgba(21, 30, 51, 0.45); color: #FFFFFF; cursor: pointer; display: grid; place-items: center; }
+.arrow svg { width: 1.2rem; height: 1.2rem; }
+.arrow.prev { left: max(0px, env(safe-area-inset-left, 0px)); }
+.arrow.next { right: max(0px, env(safe-area-inset-right, 0px)); }
+@media (max-width: 759px) { .arrow { display: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .slide[aria-hidden="false"] img { animation: drift 10s ease-out both; }
+  @keyframes drift { from { transform: scale(1.08); } to { transform: scale(1); } }
+}
+
+/* Shared photo frame: every photo sits in a box with a fixed ratio and cover crop */
+.ph { position: relative; overflow: hidden; background: var(--navy); }
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+
+/* La firma, split with Lady Justice */
+.firm-split { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 960px) { .firm-split { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 4.5rem; } }
+.firm-split .ph { aspect-ratio: 4 / 5; max-height: 38rem; }
+.firm-split .ph img { object-position: 50% 30%; }
+.firm-split .title-left { margin-bottom: 1.25rem; }
+.firm-split p { color: var(--muted); margin: 0 0 1rem; }
+.firm-split p strong { color: var(--ink); }
+.firm-quote { margin: 1.75rem 0 2rem; padding-left: 1.25rem; border-left: 2px solid var(--gold); font: 400 1.25rem/1.4 var(--f-head); color: var(--navy); }
+.firm-quote small { display: block; margin-top: 0.5rem; font: 600 0.6875rem/1.4 var(--f-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); }
+
+/* Practice tiles with photos */
+.tiles { display: grid; gap: 1.5rem; margin-top: 3rem; }
+@media (min-width: 640px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1020px) { .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.tile { display: grid; grid-template-rows: auto 1fr; background: var(--paper); border: 1px solid var(--line); min-width: 0; }
+.tile .ph { aspect-ratio: 4 / 3; }
+.tile .ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21, 30, 51, 0) 35%, rgba(21, 30, 51, 0.88) 100%); }
+.tile:hover .ph img { transform: scale(1.06); }
+.tile .ph h3 { position: absolute; z-index: 1; left: 1.25rem; right: 1.25rem; bottom: 1rem; color: #FFFFFF; font-size: 1.375rem; line-height: 1.2; font-weight: 500; }
+.tile-body { padding: 1.25rem 1.25rem 1.5rem; display: grid; gap: 0.7rem; align-content: start; }
+.tile .ref { font: 600 0.6563rem/1.5 var(--f-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-text); }
+.tile p { margin: 0; color: var(--muted); font-size: 0.875rem; }
+.tile ul { list-style: none; margin: 0; padding: 0.8rem 0 0; border-top: 1px solid var(--line); display: grid; gap: 0.3rem; font-size: 0.8125rem; }
+.tile li { padding-left: 0.95rem; position: relative; }
+.tile li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 0.4rem; height: 1px; background: var(--gold); }
+
+/* Civil-law tradition / international view: two courts side by side */
+.dual { display: grid; background: var(--navy-deep); }
+@media (min-width: 860px) { .dual { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.dual figure { margin: 0; position: relative; min-height: 26rem; color: #FFFFFF; }
+.dual .ph { position: absolute; inset: 0; }
+.dual .ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21, 30, 51, 0.25), rgba(21, 30, 51, 0.88)); }
+.dual figcaption { position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; padding: 2rem max(1.5rem, env(safe-area-inset-left, 0px)) 2.25rem; display: grid; gap: 0.6rem; max-width: 34rem; }
+.dual .kicker { font: 600 0.6875rem/1.4 var(--f-body); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft); }
+.dual h3 { font-size: clamp(1.75rem, 3vw, 2.375rem); line-height: 1.1; }
+.dual p { margin: 0; color: #DCE0EA; font-size: 0.9375rem; }
+
+/* Trust types */
+.trusts { display: grid; gap: 1.5rem; margin-top: 3rem; }
+@media (min-width: 640px) { .trusts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1120px) { .trusts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.trust { position: relative; min-height: 22rem; color: #FFFFFF; overflow: hidden; display: flex; align-items: flex-end; }
+.trust .ph { position: absolute; inset: 0; }
+.trust .ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21, 30, 51, 0.15) 20%, rgba(21, 30, 51, 0.92) 100%); }
+.trust:hover .ph img { transform: scale(1.06); }
+.trust-body { position: relative; z-index: 1; padding: 1.5rem; display: grid; gap: 0.5rem; }
+.trust-body .n { font: 600 0.6875rem/1 var(--f-body); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft); }
+.trust h3 { font-size: 1.5rem; line-height: 1.15; font-weight: 500; }
+.trust p { margin: 0; font-size: 0.875rem; color: #DCE0EA; }
+
+/* Team */
+.team-photo { margin-top: 2.5rem; aspect-ratio: 21 / 9; }
+.team-photo img { object-position: 50% 45%; }
+@media (max-width: 639px) { .team-photo { aspect-ratio: 4 / 3; } }
+.sub-title { margin: 3.5rem 0 1.5rem; font: 700 0.75rem/1.4 var(--f-body); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-text); }
+.team { display: grid; gap: 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 760px) { .team { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1120px) { .team { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.member { background: var(--paper); border: 1px solid var(--line); min-width: 0; }
+.member .ph { aspect-ratio: 4 / 5; }
+.member .ph img { object-position: 50% 20%; }
+.member-body { padding: 0.9rem 1rem 1.1rem; display: grid; gap: 0.3rem; }
+.member h3 { font-size: 1.0625rem; line-height: 1.25; font-weight: 600; }
+.member .role { font-size: 0.625rem; }
+.areas-lead { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+@media (min-width: 760px) { .areas-lead { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; } }
+.areas-lead li { display: flex; justify-content: space-between; gap: 1rem; padding-block: 0.85rem; border-bottom: 1px solid var(--line); font-size: 0.9375rem; }
+.areas-lead li span:first-child { font-weight: 600; }
+.areas-lead li span:last-child { color: var(--muted); text-align: right; }
+
+/* Photo credits */
+.credits { border-top: 1px solid var(--on-dark-line); padding-top: 1.25rem; font-size: 0.75rem; }
+.credits summary { cursor: pointer; color: #FFFFFF; font-weight: 600; }
+.credits ul { margin-top: 0.85rem; gap: 0.35rem; }
+.credits a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* La firma (centered statement) */
+.firm-text { max-width: 54rem; margin: 1.5rem auto 0; text-align: center; color: var(--muted); font-size: 1.0625rem; }
+.firm-text strong { color: var(--ink); font-weight: 700; }
+.firm-cta { margin-top: 2.25rem; text-align: center; }
+.firm-split .btn { margin-top: 0.5rem; }
+
+/* News */
+.news-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 2.25rem; }
+.news-head a { font: 600 0.75rem/1 var(--f-body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text); text-decoration: none; }
+.news { display: grid; gap: 2.5rem; }
+@media (min-width: 700px) { .news { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 3rem; } }
+@media (min-width: 1180px) { .news { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2.5rem; } }
+.news article { display: grid; gap: 0.75rem; align-content: start; min-width: 0; }
+.news time { font: 600 0.6875rem/1 var(--f-body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text); }
+.news h3 { font-size: 1.375rem; line-height: 1.3; font-weight: 500; }
+.news p { margin: 0; color: var(--muted); font-size: 0.9375rem; }
+.news a.more { font-size: 0.875rem; font-weight: 600; color: var(--navy); text-underline-offset: 4px; }
+
+/* Press feature and campaign */
+.press { display: grid; gap: 2rem; align-items: center; margin-bottom: 3rem; background: var(--paper); border: 1px solid var(--line); padding: clamp(1.25rem, 3vw, 2rem); }
+@media (min-width: 900px) { .press { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 3rem; } }
+.press figure { margin: 0; }
+.press figure img { width: 100%; height: auto; box-shadow: 0 18px 40px rgba(21, 30, 51, 0.18); }
+.press .kicker { font: 600 0.6875rem/1.4 var(--f-body); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-text); }
+.press h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.2; font-weight: 500; margin: 0.6rem 0 1rem; }
+.press p { margin: 0 0 1rem; color: var(--muted); font-size: 0.9375rem; }
+.press blockquote { margin: 0 0 1.25rem; padding-left: 1rem; border-left: 2px solid var(--gold); font: italic 400 1.125rem/1.45 var(--f-head); color: var(--navy); }
+.campaign { margin: 0 0 3rem; }
+.campaign img { width: 100%; height: auto; }
+.campaign figcaption { margin-top: 0.75rem; font-size: 0.8125rem; color: var(--muted); }
+
+/* Legislation of interest */
+.laws { display: grid; gap: 1.5rem; margin-top: 3rem; }
+@media (min-width: 860px) { .laws { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.law-group { background: var(--paper); border: 1px solid var(--line); padding: 1.75rem; min-width: 0; }
+.law-group h3 { font-size: 1.375rem; font-weight: 500; color: var(--navy); padding-bottom: 0.9rem; margin-bottom: 0.25rem; border-bottom: 2px solid var(--gold); }
+.law-group ul { list-style: none; margin: 0; padding: 0; display: grid; }
+.law-group li { display: grid; grid-template-columns: 5.25rem minmax(0, 1fr); gap: 0.15rem 1rem; padding-block: 0.85rem; border-bottom: 1px solid var(--line); }
+.law-group li:last-child { border-bottom: 0; }
+.law-no { font: 600 0.9375rem/1.4 var(--f-head); color: var(--gold-text); white-space: nowrap; }
+.law-name { font-size: 0.9375rem; color: var(--ink); }
+.law-note { grid-column: 2; font-size: 0.8125rem; color: var(--muted); }
+.law-link { grid-column: 2; font-size: 0.8125rem; font-weight: 600; color: var(--navy); text-underline-offset: 3px; }
+.laws-note { margin: 1.5rem 0 0; font-size: 0.8125rem; color: var(--muted); max-width: 52rem; }
+.upcoming { display: grid; gap: 1rem; margin-top: 1.5rem; }
+@media (min-width: 640px) { .upcoming { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1020px) { .upcoming { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.upcoming article { border: 1px dashed var(--gold); padding: 1.25rem 1.25rem 1.35rem; display: grid; gap: 0.45rem; align-content: start; background: var(--paper); }
+.upcoming .soon { font: 700 0.625rem/1 var(--f-body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text); }
+.upcoming h4 { margin: 0; font: 500 1.125rem/1.3 var(--f-head); color: var(--navy); }
+.upcoming p { margin: 0; font-size: 0.8125rem; color: var(--muted); }
+
+/* Video interviews */
+.videos { display: grid; gap: 1.5rem; margin-bottom: 3rem; }
+@media (min-width: 640px) { .videos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.video { display: grid; gap: 0.75rem; align-content: start; text-decoration: none; color: inherit; min-width: 0; }
+.video .ph { aspect-ratio: 4 / 5; }
+.video.main { grid-column: 1 / -1; }
+.video.main .ph { aspect-ratio: 21 / 9; }
+.video.main .ph img { object-position: 50% 10%; }
+@media (max-width: 639px) { .video.main .ph { aspect-ratio: 16 / 9; } }
+.video .ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21, 30, 51, 0) 50%, rgba(21, 30, 51, 0.55) 100%); }
+.video:hover .ph img { transform: scale(1.04); }
+.play { position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 4rem; height: 4rem; border-radius: 50%; background: rgba(255, 255, 255, 0.92); display: grid; place-items: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); transition: transform .2s; }
+.play svg { width: 1.5rem; height: 1.5rem; color: var(--navy); margin-left: 0.2rem; }
+.video:hover .play { transform: translate(-50%, -50%) scale(1.08); }
+.video .tag { position: absolute; z-index: 1; left: 0.9rem; top: 0.9rem; background: var(--gold); color: #FFFFFF; font: 700 0.625rem/1 var(--f-body); letter-spacing: 0.14em; text-transform: uppercase; padding: 0.4rem 0.6rem; }
+.video h4 { margin: 0; font: 500 1.0625rem/1.35 var(--f-head); color: var(--navy); }
+.video.main h4 { font-size: 1.375rem; }
+.video small { font-size: 0.75rem; color: var(--muted); }
+
+/* Practice areas (three-column text grid) */
+.areas { display: grid; gap: 2.75rem 3rem; margin-top: 3rem; }
+@media (min-width: 700px) { .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1020px) { .areas { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.area { min-width: 0; display: grid; gap: 0.6rem; align-content: start; padding-top: 1.5rem; border-top: 2px solid var(--navy); }
+.area .ico { width: 2.5rem; height: 2.5rem; color: var(--gold); }
+.area h3 { font-size: 1.5rem; line-height: 1.2; font-weight: 500; color: var(--navy); }
+.area .ref { font: 600 0.6875rem/1.5 var(--f-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-text); }
+.area p { margin: 0; color: var(--muted); font-size: 0.9375rem; }
+.area ul { list-style: none; margin: 0.25rem 0 0; padding: 0; display: grid; gap: 0.35rem; font-size: 0.875rem; }
+.area li { padding-left: 1rem; position: relative; }
+.area li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 0.45rem; height: 1px; background: var(--gold); }
+
+/* Recognition strip (four quotes on navy) */
+.strip { background: var(--navy); color: #FFFFFF; }
+.strip ul { list-style: none; margin: 0; padding-block: clamp(3rem, 6vw, 4.5rem); display: grid; gap: 2.5rem; text-align: center; }
+@media (min-width: 640px) { .strip ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .strip ul { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.strip li { display: grid; gap: 0.75rem; align-content: start; min-width: 0; }
+.strip q { font: 400 1.375rem/1.3 var(--f-head); quotes: "“" "”"; }
+.strip small { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--on-dark-muted); }
+
+/* Business banner */
+.biz { position: relative; overflow: hidden; color: #FFFFFF; background: var(--navy-deep); }
+.biz img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.28; }
+.biz .wrap { position: relative; padding-block: clamp(4rem, 8vw, 6rem); display: grid; gap: 1.75rem; justify-items: center; text-align: center; }
+.biz h2 { font-size: clamp(1.875rem, 3.4vw, 2.625rem); line-height: 1.15; max-width: 26ch; }
+.biz p { margin: 0; max-width: 40rem; color: #DCE0EA; }
+
+/* Partners */
+.partners { display: grid; gap: 2rem; }
+@media (min-width: 860px) { .partners { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; } }
+.partner { display: grid; grid-template-columns: minmax(0, 1fr); background: var(--paper); border: 1px solid var(--line); min-width: 0; }
+@media (min-width: 560px) { .partner { grid-template-columns: 12rem minmax(0, 1fr); } }
+.portrait { position: relative; background: var(--navy); min-height: 15rem; }
+.portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; }
+.portrait .initials { position: absolute; inset: 0; display: grid; place-items: center; font: 400 3.5rem/1 var(--f-head); letter-spacing: 0.06em; color: var(--gold-soft); }
+.portrait .note { position: absolute; left: 0.75rem; bottom: 0.75rem; font-size: 0.75rem; }
+.partner-body { padding: 1.75rem; display: grid; gap: 0.85rem; align-content: start; min-width: 0; }
+.partner h3 { font-size: 1.5rem; line-height: 1.2; font-weight: 500; }
+.role { font: 700 0.6875rem/1.5 var(--f-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); }
+.partner p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.cv { border-top: 1px solid var(--line); }
+.cv summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding-top: 0.85rem; font: 700 0.6875rem/1 var(--f-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); }
+.cv summary::-webkit-details-marker { display: none; }
+.cv summary::after { content: "+"; font: 400 1.4rem/1 var(--f-body); color: var(--gold); transition: transform .2s; }
+.cv[open] summary::after { transform: rotate(45deg); }
+.cv dl { margin: 0.9rem 0 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.15rem; font-size: 0.85rem; }
+.cv dt { color: var(--muted); font-weight: 700; font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.6rem; }
+.cv dd { margin: 0; overflow-wrap: anywhere; }
+.cv dd ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.3rem; }
+
+/* CTA */
+.help { background: var(--tint); text-align: center; }
+.help .wrap { padding-block: clamp(3.5rem, 7vw, 5rem); display: grid; gap: 1.75rem; justify-items: center; }
+.help .row { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+
+/* Contact */
+.contact { display: grid; gap: 3rem; }
+@media (min-width: 960px) { .contact { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 5rem; } }
+.contact-list { display: grid; border-top: 1px solid var(--line); }
+.ci { display: grid; grid-template-columns: 2rem minmax(0, 1fr) auto; gap: 0.25rem 1rem; padding-block: 1.15rem; border-bottom: 1px solid var(--line); align-items: start; }
+.ci svg { width: 1.3rem; height: 1.3rem; color: var(--gold); margin-top: 0.2rem; }
+.ci .k { display: block; font: 700 0.6875rem/1.4 var(--f-body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.ci .v { display: block; font-size: 1.0625rem; margin-top: 0.2rem; overflow-wrap: anywhere; user-select: all; }
+.ci .v a { user-select: none; display: inline-block; margin-top: 0.35rem; font-size: 0.875rem; color: var(--gold-text); }
+.copy { font: 700 0.6875rem/1 var(--f-body); letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; color: var(--navy); background: transparent; border: 1px solid var(--line); padding: 0.55rem 0.75rem; align-self: center; }
+.copy:hover { border-color: var(--navy); }
+.notice { margin: 1.5rem 0 0; font-size: 0.8125rem; color: var(--muted); max-width: 40rem; }
+
+/* Footer */
+footer { background: var(--navy); color: var(--on-dark-muted); font-size: 0.875rem; }
+footer .wrap { padding-block: 3.75rem 2rem; display: grid; gap: 2.5rem; }
+.foot-grid { display: grid; gap: 2rem 3rem; }
+@media (min-width: 860px) { .foot-grid { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr); } }
+footer .brand { color: #FFFFFF; margin: 0 0 1rem; }
+footer .brand-text span { color: var(--gold-soft); }
+footer h4 { margin: 0 0 1rem; font: 700 0.6875rem/1.4 var(--f-body); letter-spacing: 0.18em; text-transform: uppercase; color: #FFFFFF; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+footer a { text-decoration: none; }
+footer a:hover { color: #FFFFFF; }
+footer p { margin: 0; }
+footer strong { color: #FFFFFF; font-weight: 600; }
+.foot-bottom { border-top: 1px solid var(--on-dark-line); padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; justify-content: space-between; font-size: 0.75rem; }
+
+/* Floating WhatsApp and review note */
+.wa-float {
+  position: fixed; z-index: 15; width: 3.5rem; height: 3.5rem; border-radius: 50%;
+  right: calc(1.25rem + env(safe-area-inset-right, 0px)); bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  display: grid; place-items: center; background: var(--wa); color: #FFFFFF; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+.wa-float svg { width: 1.75rem; height: 1.75rem; }
+.draft {
+  position: fixed; z-index: 15; left: calc(1rem + env(safe-area-inset-left, 0px)); bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  max-width: min(22rem, calc(100vw - 6.5rem)); background: var(--pend-bg); color: var(--pend-fg);
+  font: 500 0.75rem/1.4 var(--f-body); padding: 0.6rem 0.8rem; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border: 0; text-align: left; cursor: pointer;
+}
+</style>
+<style>html, body { margin: 0; } [hidden] { display: none !important; }</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="esla-mark" viewBox="0 0 100 100">
+    <rect x="2" y="2" width="96" height="96" rx="14" fill="#C07D46"/>
+    <rect x="8" y="8" width="84" height="84" rx="10" fill="none" stroke="#FFFFFF" stroke-width="2.4"/>
+    <path d="M27 50 H73 V38 Q73 28 63 28 H37 Q27 28 27 38 V62 Q27 72 37 72 H70" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-building" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 42h32M12 42V14l12-6 12 6v28"/><path d="M18 20h4M26 20h4M18 27h4M26 27h4M18 34h4M26 34h4"/></g></symbol>
+  <symbol id="i-trust" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><circle cx="24" cy="21" r="4"/><path d="M24 25v8M24 29h3"/></g></symbol>
+  <symbol id="i-contract" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8M17 20h14M17 26h14M17 32h8"/><path d="M28 38c2-3 4-3 5 0s3 2 4-1"/></g></symbol>
+  <symbol id="i-gavel" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 9l12 12M14 14l12 12M16.5 11.5l12 12"/><path d="M14 14l5-5M26 26l5-5"/><path d="M22 18l14 14-3 3-14-14"/><path d="M8 42h18"/></g></symbol>
+  <symbol id="i-coins" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="20" cy="14" rx="11" ry="4.5"/><path d="M9 14v8c0 2.5 5 4.5 11 4.5s11-2 11-4.5v-8M9 22v8c0 2.5 5 4.5 11 4.5"/><ellipse cx="31" cy="31" rx="9" ry="4"/><path d="M22 31v6c0 2.2 4 4 9 4s9-1.8 9-4v-6"/></g></symbol>
+  <symbol id="i-stamp" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 22c-2-3-3-5-3-8a8 8 0 0116 0c0 3-1 5-3 8"/><path d="M10 30h28v6H10zM8 42h32M19 22h10v8H19z"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.4-.3z"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></g></symbol>
+</svg>
+
+<div id="app" data-lang="es">
+
+<div class="topbar">
+  <div class="wrap">
+    <span><svg aria-hidden="true"><use href="#i-phone"/></svg>+1 (809) 960-2992</span>
+    <span class="hide-sm"><svg aria-hidden="true"><use href="#i-mail"/></svg>info@eslard.com</span>
+    <span class="hide-sm"><svg aria-hidden="true"><use href="#i-pin"/></svg>Av. Abraham Lincoln No. 605, Naco</span>
+    <a class="social" href="https://www.instagram.com/esla_rd/" target="_blank" rel="noopener" aria-label="Instagram @esla_rd"><svg aria-hidden="true"><use href="#i-ig"/></svg>@esla_rd</a>
+    <span class="spacer"></span>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" id="lang-es" data-set="es" aria-pressed="true">Español</button>
+      <button type="button" id="lang-en" data-set="en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-head" id="head">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="ESLA Abogados Consultores"><svg aria-hidden="true"><use href="#esla-mark"/></svg><span class="brand-text"><b>ESLA</b><span>Abogados Consultores</span></span></a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#firma"><span lang="es">La firma</span><span lang="en">The firm</span></a>
+      <a href="#areas"><span lang="es">Áreas de práctica</span><span lang="en">Practice areas</span></a>
+      <a href="#fideicomisos"><span lang="es">Fideicomisos</span><span lang="en">Trusts</span></a>
+      <a href="#socios"><span lang="es">Nuestro equipo</span><span lang="en">Our team</span></a>
+      <a href="#noticias"><span lang="es">Publicaciones</span><span lang="en">Publications</span></a>
+      <a href="#legislacion"><span lang="es">Legislación</span><span lang="en">Legislation</span></a>
+      <a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
+    </nav>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menú">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="slider" id="slider" aria-roledescription="carrusel" aria-label="Destacados">
+  <div class="slide" aria-hidden="false">
+    <img src="assets/img-justicia.jpg" alt="" width="1024" height="813" fetchpriority="high">
+    <div class="wrap">
+      <p class="kicker"><span lang="es">Abogados consultores · Santo Domingo</span><span lang="en">Attorneys &amp; consultants · Santo Domingo</span></p>
+      <h1><span lang="es">Estructuramos sus negocios. Defendemos sus contratos.</span><span lang="en">We structure your business. We defend your contracts.</span></h1>
+      <p class="sub"><span lang="es">Derecho mercantil, corporativo y fiduciario, y litigación civil y contractual, con los socios al frente de cada asunto.</span><span lang="en">Commercial, corporate and trust law, and civil and contract litigation, with the partners leading every matter.</span></p>
+      <a class="btn btn-gold" href="#firma"><span lang="es">Conozca la firma</span><span lang="en">About the firm</span></a>
+    </div>
+  </div>
+  <div class="slide" aria-hidden="true">
+    <img src="assets/img-litigio.jpg" alt="" width="1024" height="683" loading="lazy">
+    <div class="wrap">
+      <p class="kicker"><span lang="es">Litigación civil y arbitraje</span><span lang="en">Civil litigation and arbitration</span></p>
+      <h2><span lang="es">Más de veinte años defendiendo contratos ante los tribunales.</span><span lang="en">More than twenty years defending contracts in court.</span></h2>
+      <p class="sub"><span lang="es">Desde la primera instancia hasta la Suprema Corte de Justicia, con la estrategia definida desde el primer escrito.</span><span lang="en">From first instance to the Supreme Court of Justice, with the strategy set from the first filing.</span></p>
+      <a class="btn btn-gold" href="#areas"><span lang="es">Áreas de práctica</span><span lang="en">Practice areas</span></a>
+    </div>
+  </div>
+  <div class="slide" aria-hidden="true">
+    <img src="assets/img-buque.jpg" alt="" width="1024" height="683" loading="lazy">
+    <div class="wrap">
+      <p class="kicker"><span lang="es">Comercio, contratos e inversión</span><span lang="en">Trade, contracts and investment</span></p>
+      <h2><span lang="es">Su negocio cruza fronteras. Su contrato también.</span><span lang="en">Your business crosses borders. So does your contract.</span></h2>
+      <p class="sub"><span lang="es">Contratos de distribución, suministro y transporte redactados para cumplirse, y defendidos cuando no se cumplen.</span><span lang="en">Distribution, supply and shipping contracts drafted to be performed, and defended when they are not.</span></p>
+      <a class="btn btn-gold" href="#areas"><span lang="es">Ver servicios</span><span lang="en">See services</span></a>
+    </div>
+  </div>
+  <div class="slide" aria-hidden="true">
+    <img src="assets/img-ciudad.jpg" alt="" width="1024" height="768" loading="lazy">
+    <div class="wrap">
+      <p class="kicker"><span lang="es">Fideicomisos e inmobiliario</span><span lang="en">Trusts and real estate</span></p>
+      <h2><span lang="es">Patrimonio protegido. Proyectos con reglas claras.</span><span lang="en">Protected assets. Projects with clear rules.</span></h2>
+      <p class="sub"><span lang="es">Fideicomisos de administración, inmobiliarios y de garantía estructurados conforme a la Ley 189-11.</span><span lang="en">Management, real estate and security trusts structured under Law 189-11.</span></p>
+      <a class="btn btn-gold" href="#fideicomisos"><span lang="es">Fideicomisos</span><span lang="en">Trusts</span></a>
+    </div>
+  </div>
+  <button class="arrow prev" id="prev" type="button" aria-label="Anterior"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+  <button class="arrow next" id="next" type="button" aria-label="Siguiente"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+  <div class="dots" id="dots">
+    <button type="button" id="dot-0" aria-label="1" aria-current="true"></button>
+    <button type="button" id="dot-1" aria-label="2" aria-current="false"></button>
+    <button type="button" id="dot-2" aria-label="3" aria-current="false"></button>
+    <button type="button" id="dot-3" aria-label="4" aria-current="false"></button>
+  </div>
+</section>
+
+<section class="section" id="firma">
+  <div class="wrap firm-split">
+    <div class="ph"><img src="assets/socios-biblioteca.jpg" alt="Los socios Jonathan Peralta y Miriam Estévez en la biblioteca jurídica de ESLA" width="560" height="677" loading="lazy"></div>
+    <div>
+    <h2 class="title-left"><span lang="es">La firma</span><span lang="en">The firm</span></h2>
+    <p>
+      <span lang="es">ESLA Abogados Consultores es una firma dominicana dirigida por sus socios. Acompañamos a <strong>empresas, inversionistas y familias empresarias</strong> en la estructuración de sus negocios y los defendemos cuando un contrato se discute. Trabajamos con <strong>atención directa de los socios</strong>, <strong>honorarios claros por escrito</strong> y una idea simple: el mejor litigio es el que se evita con un buen documento, y el que no se puede evitar se prepara desde el primer día.</span>
+      <span lang="en">ESLA Abogados Consultores is a Dominican firm led by its partners. We advise <strong>companies, investors and business families</strong> on structuring their business and defend them when a contract is disputed. We work with <strong>direct partner attention</strong>, <strong>clear written fees</strong> and a simple idea: the best lawsuit is the one a good document prevents, and the one that cannot be avoided is prepared from day one.</span>
+    </p>
+    <p class="firm-quote">
+      <span lang="es">«Las convenciones legalmente formadas tienen fuerza de ley para aquellos que las han hecho.»</span>
+      <span lang="en">“Agreements lawfully entered into have the force of law for those who have made them.”</span>
+      <small><span lang="es">Código Civil dominicano, art. 1134</span><span lang="en">Dominican Civil Code, art. 1134</span></small>
+    </p>
+    <a class="btn btn-navy" href="#contacto"><span lang="es">Agende una consulta</span><span lang="en">Book a consultation</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section mist" id="noticias">
+  <div class="wrap">
+    <div class="news-head">
+      <h2 class="title-left"><span lang="es">Publicaciones y prensa</span><span lang="en">Publications and press</span></h2>
+      <a href="https://www.eslard.com/blog/" target="_blank" rel="noopener"><span lang="es">Ver todas →</span><span lang="en">See all →</span></a>
+    </div>
+    <article class="press">
+      <figure><img src="assets/prensa-mercado-encabezado.jpg" alt="Encabezado del reportaje de Revista Mercado, Top Lawyers, sobre ESLA Abogados Consultores" width="830" height="238" loading="lazy"></figure>
+      <div>
+        <span class="kicker"><span lang="es">En la prensa · Revista Mercado, septiembre 2026</span><span lang="en">In the press · Revista Mercado, September 2026</span></span>
+        <h3><span lang="es">ESLA, destacada en la edición Top Lawyers</span><span lang="en">ESLA featured in the Top Lawyers edition</span></h3>
+        <p><span lang="es">Revista Mercado reseña a ESLA Abogados Consultores y a sus socios fundadores, Miriam Estévez y Jonathan Peralta, por su trabajo en gobierno corporativo, estructuración patrimonial, fideicomisos y planificación sucesoral.</span><span lang="en">Revista Mercado profiles ESLA Abogados Consultores and its founding partners, Miriam Estévez and Jonathan Peralta, for their work in corporate governance, wealth structuring, trusts and estate planning.</span></p>
+        <blockquote><span lang="es">«Integran gobernanza, estrategia y ética para fortalecer empresas, proteger patrimonios y generar confianza sostenible.»</span><span lang="en">“They bring together governance, strategy and ethics to strengthen companies, protect assets and build lasting trust.”</span></blockquote>
+        <a class="btn btn-navy" href="https://issuu.com/revistamercado1/docs/_rm_revista_mercado_-_septiembre_-_2026" target="_blank" rel="noopener"><span lang="es">Leer en la edición digital</span><span lang="en">Read the digital edition</span></a>
+      </div>
+    </article>
+
+    <figure class="campaign">
+      <img src="assets/campana-abogados-especializados.jpg" alt="Campaña institucional de ESLA Abogados Consultores: Abogados especializados, con los socios Jonathan Peralta y Miriam Estévez" width="1094" height="718" loading="lazy">
+      <figcaption><span lang="es">Campaña institucional «Abogados especializados».</span><span lang="en">Institutional campaign “Abogados especializados”.</span></figcaption>
+    </figure>
+
+    <h3 class="sub-title" style="margin-top:0"><span lang="es">Entrevistas en video</span><span lang="en">Video interviews</span></h3>
+    <div class="videos">
+      <a class="video main" href="https://www.youtube.com/watch?v=2nY6b280qyU" target="_blank" rel="noopener">
+        <div class="ph"><img src="assets/video-entrevista.jpg" alt="" width="1280" height="720" loading="lazy"><span class="tag"><span lang="es">Entrevista</span><span lang="en">Interview</span></span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span></div>
+        <h4><span lang="es">La importancia del enfoque empático en la práctica legal</span><span lang="en">Why an empathetic approach matters in legal practice</span></h4>
+        <small>Mercado Media Network · YouTube</small>
+      </a>
+      <a class="video" href="https://www.youtube.com/shorts/A0eh3DIZqdg" target="_blank" rel="noopener">
+        <div class="ph"><img src="assets/video-ia.jpg" alt="" width="576" height="720" loading="lazy"><span class="tag"><span lang="es">Short</span><span lang="en">Short</span></span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span></div>
+        <h4><span lang="es">¿Puede la IA entender el razonamiento emocional?</span><span lang="en">Can AI understand emotional reasoning?</span></h4>
+        <small>Mercado Media Network · YouTube</small>
+      </a>
+      <a class="video" href="https://www.youtube.com/shorts/ffZRGBSH4LQ" target="_blank" rel="noopener">
+        <div class="ph"><img src="assets/video-liderazgo.jpg" alt="" width="576" height="720" loading="lazy"><span class="tag"><span lang="es">Short</span><span lang="en">Short</span></span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span></div>
+        <h4><span lang="es">La toma de decisiones en el liderazgo empresarial</span><span lang="en">Decision-making in business leadership</span></h4>
+        <small>Mercado Media Network · YouTube</small>
+      </a>
+      <a class="video" href="https://www.youtube.com/shorts/LgOSESpKtAY" target="_blank" rel="noopener">
+        <div class="ph"><img src="assets/video-riesgos.jpg" alt="" width="576" height="720" loading="lazy"><span class="tag"><span lang="es">Short</span><span lang="en">Short</span></span><span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span></div>
+        <h4><span lang="es">Mitigación de riesgos legales en negocios exitosos</span><span lang="en">Mitigating legal risk in successful businesses</span></h4>
+        <small>Mercado Media Network · YouTube</small>
+      </a>
+    </div>
+
+    <div class="news">
+      <article>
+        <time datetime="2026"><span lang="es">2026 · Revista Mercado</span><span lang="en">2026 · Revista Mercado</span></time>
+        <h3><span lang="es">ESLA, incluida en el libro Best Lawyers II de Revista Mercado</span><span lang="en">ESLA included in Revista Mercado's Best Lawyers II book</span></h3>
+        <p><span lang="es">Segundo tomo de la publicación de Mercado dedicada a los abogados y firmas de la República Dominicana.</span><span lang="en">The second volume of Mercado's publication on lawyers and law firms in the Dominican Republic.</span></p>
+        <a class="more" href="https://issuu.com/revistamercado1/docs/_rm_best_lawyers_ii_2026" target="_blank" rel="noopener"><span lang="es">Ver la edición digital</span><span lang="en">See the digital edition</span></a>
+      </article>
+      <article>
+        <time datetime="2025-11-21"><span lang="es">21 de noviembre, 2025</span><span lang="en">November 21, 2025</span></time>
+        <h3><span lang="es">ESLA, seleccionada para los Latin American Excellence in Law Awards 2025</span><span lang="en">ESLA selected for the Latin American Excellence in Law Awards 2025</span></h3>
+        <p><span lang="es">El Latin American Quality Institute invitó a la firma al Quality Festival 2025, celebrado en Ciudad de Panamá.</span><span lang="en">The Latin American Quality Institute invited the firm to the Quality Festival 2025, held in Panama City.</span></p>
+        <a class="more" href="https://www.eslard.com/2025/11/21/esla-abogados-consultores-es-reconocida-por-el-quality-festival-2025-en-panama/" target="_blank" rel="noopener"><span lang="es">Leer más</span><span lang="en">Read more</span></a>
+      </article>
+      <article>
+        <time datetime="2025-06-28"><span lang="es">28 de junio, 2025</span><span lang="en">June 28, 2025</span></time>
+        <h3><span lang="es">ESLA recibe The Law Awards 2025 y la Certificación Q-ESG</span><span lang="en">ESLA receives The Law Awards 2025 and the Q-ESG Certification</span></h3>
+        <p><span lang="es">Reconocimiento del LAQI Impact Summit — Centroamérica y el Caribe a la gestión responsable de la firma.</span><span lang="en">Recognition from the LAQI Impact Summit — Central America and the Caribbean for the firm's responsible management.</span></p>
+        <a class="more" href="https://www.eslard.com/2025/06/28/esla-abogados-consultores-asume-compromiso-con-las-buenas-practicas-y-recibe-la-certificacion-q-esg-en-el-laqi-impact-summit-2025/" target="_blank" rel="noopener"><span lang="es">Leer más</span><span lang="en">Read more</span></a>
+      </article>
+      <article>
+        <time datetime="2024-09-09"><span lang="es">9 de septiembre, 2024 · Revista Mercado</span><span lang="en">September 9, 2024 · Revista Mercado</span></time>
+        <h3><span lang="es">Esla Abogados Consultores: la importancia del enfoque empático en la práctica legal</span><span lang="en">Esla Abogados Consultores: why an empathetic approach matters in legal practice</span></h3>
+        <p><span lang="es">Entrevista de Revista Mercado a los socios Jonathan Peralta y Miriam Estévez sobre cómo la firma ha crecido en un mercado exigente.</span><span lang="en">Revista Mercado interviews partners Jonathan Peralta and Miriam Estévez on how the firm has grown in a demanding market.</span></p>
+        <a class="more" href="https://revistamercado.do/mercado_interviews/esla-abogados-consultores-importancia-enfoque-empatico-practica-legal/" target="_blank" rel="noopener"><span lang="es">Leer en Revista Mercado</span><span lang="en">Read on Revista Mercado</span></a>
+      </article>
+    </div>
+
+    <h3 class="sub-title"><span lang="es">Próximas publicaciones</span><span lang="en">Upcoming insights</span></h3>
+    <div class="upcoming">
+      <article><span class="soon"><span lang="es">Próximamente</span><span lang="en">Coming soon</span></span><h4><span lang="es">Requisitos para la inversión extranjera en la República Dominicana</span><span lang="en">Requirements for foreign investment in the Dominican Republic</span></h4><p><span lang="es">Registro de la inversión y derechos del inversionista bajo la Ley 16-95.</span><span lang="en">Investment registration and investor rights under Law 16-95.</span></p></article>
+      <article><span class="soon"><span lang="es">Próximamente</span><span lang="en">Coming soon</span></span><h4><span lang="es">Compra de inmuebles por extranjeros: guía paso a paso</span><span lang="en">Buying property as a foreigner: a step-by-step guide</span></h4><p><span lang="es">Debida diligencia, contrato, impuestos y registro del título.</span><span lang="en">Due diligence, contract, taxes and title registration.</span></p></article>
+      <article><span class="soon"><span lang="es">Próximamente</span><span lang="en">Coming soon</span></span><h4><span lang="es">Residencia por inversión</span><span lang="en">Residency by investment</span></h4><p><span lang="es">Vías y requisitos según la Ley 285-04 y su Reglamento 631-11.</span><span lang="en">Routes and requirements under Law 285-04 and Regulation 631-11.</span></p></article>
+      <article><span class="soon"><span lang="es">Próximamente</span><span lang="en">Coming soon</span></span><h4><span lang="es">Incentivos turísticos CONFOTUR</span><span lang="en">CONFOTUR tourism incentives</span></h4><p><span lang="es">Exenciones y procedimiento de clasificación bajo la Ley 158-01.</span><span lang="en">Exemptions and the approval process under Law 158-01.</span></p></article>
+      <article><span class="soon"><span lang="es">Próximamente</span><span lang="en">Coming soon</span></span><h4><span lang="es">Reorganización patrimonial</span><span lang="en">Wealth restructuring</span></h4><p><span lang="es">Fideicomisos, sociedades holding y planificación sucesoral para familias empresarias.</span><span lang="en">Trusts, holding companies and estate planning for business families.</span></p></article>
+      <article><span class="soon"><span lang="es">Próximamente</span><span lang="en">Coming soon</span></span><h4><span lang="es">Constitución de empresas y fundaciones</span><span lang="en">Setting up companies and foundations</span></h4><p><span lang="es">Tipos societarios de la Ley 479-08 y asociaciones sin fines de lucro de la Ley 122-05.</span><span lang="en">Company types under Law 479-08 and non-profits under Law 122-05.</span></p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="areas">
+  <div class="wrap">
+    <h2 class="title"><span lang="es">Áreas de práctica</span><span lang="en">Practice areas</span></h2>
+    <p class="intro"><span lang="es">Asesoramos la operación de su negocio y lo defendemos cuando hay un conflicto. Cada servicio, con su base legal a la vista.</span><span lang="en">We advise on your business and defend it when a dispute arises. Every service, with its legal basis in plain sight.</span></p>
+    <div class="tiles">
+      <article class="tile">
+        <div class="ph"><img src="assets/img-torres.jpg" alt="" width="682" height="1024" loading="lazy"><h3><span lang="es">Corporativo y Societario</span><span lang="en">Corporate Law</span></h3></div>
+        <div class="tile-body">
+          <span class="ref"><span lang="es">Ley 479-08, mod. por la Ley 31-11</span><span lang="en">Law 479-08, as amended by Law 31-11</span></span>
+          <p><span lang="es">Acompañamos a la empresa en toda su vida societaria, con documentos que resisten una auditoría o un conflicto entre socios.</span><span lang="en">We support companies throughout their corporate life, with documents built to withstand an audit or a shareholder dispute.</span></p>
+          <ul>
+            <li><span lang="es">Constitución de SRL, SA, SAS y EIRL</span><span lang="en">Incorporation of SRL, SA, SAS and EIRL</span></li>
+            <li><span lang="es">Asambleas, actas y gobierno corporativo</span><span lang="en">Meetings, minutes and governance</span></li>
+            <li><span lang="es">Pactos de socios, fusiones y due diligence</span><span lang="en">Shareholder agreements, mergers, due diligence</span></li>
+          </ul>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="ph"><img src="assets/img-boveda.jpg" alt="" width="1000" height="662" loading="lazy"><h3><span lang="es">Fideicomisos</span><span lang="en">Trusts (Fideicomisos)</span></h3></div>
+        <div class="tile-body">
+          <span class="ref"><span lang="es">Ley 189-11 y sus reglamentos</span><span lang="en">Law 189-11 and its regulations</span></span>
+          <p><span lang="es">Estructuramos fideicomisos para proteger patrimonio, garantizar obligaciones y desarrollar proyectos con reglas claras.</span><span lang="en">We structure trusts to protect assets, secure obligations and develop projects with clear rules.</span></p>
+          <ul>
+            <li><span lang="es">Administración y planificación sucesoral</span><span lang="en">Management and estate planning</span></li>
+            <li><span lang="es">Inmobiliarios y de garantía</span><span lang="en">Real estate and security trusts</span></li>
+            <li><span lang="es">Fideicomitentes y beneficiarios</span><span lang="en">Settlors and beneficiaries</span></li>
+          </ul>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="ph"><img src="assets/img-contenedores.jpg" alt="" width="1024" height="679" loading="lazy"><h3><span lang="es">Contratos y Mercantil</span><span lang="en">Contracts and Commercial</span></h3></div>
+        <div class="tile-body">
+          <span class="ref"><span lang="es">Código Civil, arts. 1101 y ss.; Código de Comercio</span><span lang="en">Civil Code, arts. 1101 et seq.; Commercial Code</span></span>
+          <p><span lang="es">Redactamos, negociamos y revisamos sus contratos, buscando los puntos débiles antes que la contraparte.</span><span lang="en">We draft, negotiate and review your contracts, finding the weak points before the other side does.</span></p>
+          <ul>
+            <li><span lang="es">Compraventa, distribución y suministro</span><span lang="en">Sale, distribution and supply</span></li>
+            <li><span lang="es">Arrendamientos y servicios</span><span lang="en">Leases and services</span></li>
+            <li><span lang="es">Opiniones legales</span><span lang="en">Legal opinions</span></li>
+          </ul>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="ph"><img src="assets/img-mallete-libros.jpg" alt="" width="1023" height="682" loading="lazy"><h3><span lang="es">Litigación Civil y Arbitraje</span><span lang="en">Civil Litigation and Arbitration</span></h3></div>
+        <div class="tile-body">
+          <span class="ref"><span lang="es">Código de Procedimiento Civil; Ley 2-23 sobre Recurso de Casación</span><span lang="en">Civil Procedure Code; Law 2-23 on Cassation</span></span>
+          <p><span lang="es">Le representamos en todas las instancias, hasta la Suprema Corte de Justicia, y en arbitrajes comerciales.</span><span lang="en">We represent you at every level, up to the Supreme Court of Justice, and in commercial arbitration.</span></p>
+          <ul>
+            <li><span lang="es">Ejecución y resolución de contratos</span><span lang="en">Contract enforcement and termination</span></li>
+            <li><span lang="es">Referimientos y medidas conservatorias</span><span lang="en">Summary and interim measures</span></li>
+            <li><span lang="es">Apelación, casación y arbitraje</span><span lang="en">Appeals, cassation and arbitration</span></li>
+          </ul>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="ph"><img src="assets/img-penal.jpg" alt="" width="800" height="800" loading="lazy"><h3><span lang="es">Derecho Penal</span><span lang="en">Criminal Law</span></h3></div>
+        <div class="tile-body">
+          <span class="ref"><span lang="es">Código Penal, Ley 74-25; Código Procesal Penal, Ley 97-25</span><span lang="en">Criminal Code, Law 74-25; Criminal Procedure Code, Law 97-25</span></span>
+          <p><span lang="es">Defendemos a personas y empresas en procesos penales, y representamos a las víctimas que buscan reparación, con especial atención a los delitos económicos.</span><span lang="en">We defend individuals and companies in criminal proceedings and represent victims seeking redress, with a focus on economic crimes.</span></p>
+          <ul>
+            <li><span lang="es">Querellas y constitución en actor civil</span><span lang="en">Criminal complaints and civil claims within proceedings</span></li>
+            <li><span lang="es">Estafa, abuso de confianza y cheques sin fondos</span><span lang="en">Fraud, breach of trust and bad checks</span></li>
+            <li><span lang="es">Defensa técnica y medidas de coerción</span><span lang="en">Criminal defense and pretrial measures</span></li>
+            <li><span lang="es">Apelación y casación penal</span><span lang="en">Criminal appeals and cassation</span></li>
+          </ul>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="ph"><img src="assets/img-monedas.jpg" alt="" width="1024" height="768" loading="lazy"><h3><span lang="es">Cobros y Recuperación</span><span lang="en">Debt Collection and Recovery</span></h3></div>
+        <div class="tile-body">
+          <span class="ref"><span lang="es">Vía extrajudicial y judicial</span><span lang="en">Out-of-court and judicial</span></span>
+          <p><span lang="es">Recuperamos créditos con orden: primero la vía amigable y, cuando hace falta, las medidas que aseguran el cobro.</span><span lang="en">We recover credit in order: negotiation first and, when needed, the measures that secure payment.</span></p>
+          <ul>
+            <li><span lang="es">Intimaciones y acuerdos de pago</span><span lang="en">Formal demands and payment plans</span></li>
+            <li><span lang="es">Embargos conservatorios y ejecutivos</span><span lang="en">Precautionary and enforcement attachments</span></li>
+            <li><span lang="es">Reportes periódicos de cartera</span><span lang="en">Periodic portfolio reports</span></li>
+          </ul>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="ph"><img src="assets/img-patrimonio.jpg" alt="" width="640" height="640" loading="lazy"><h3><span lang="es">Planificación Patrimonial y Sucesoral</span><span lang="en">Wealth and Estate Planning</span></h3></div>
+        <div class="tile-body">
+          <span class="ref"><span lang="es">Código Civil; Ley 189-11 sobre Fideicomiso</span><span lang="en">Civil Code; Law 189-11 on Trusts</span></span>
+          <p><span lang="es">Ordenamos el patrimonio de la familia empresaria para que pase a la siguiente generación sin conflictos ni pérdidas.</span><span lang="en">We organize the business family's assets so they pass to the next generation without disputes or losses.</span></p>
+          <ul>
+            <li><span lang="es">Planificación sucesoral y testamentos</span><span lang="en">Estate planning and wills</span></li>
+            <li><span lang="es">Protocolos de familia empresaria</span><span lang="en">Family business protocols</span></li>
+            <li><span lang="es">Estructuración y protección patrimonial</span><span lang="en">Asset structuring and protection</span></li>
+          </ul>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="ph"><img src="assets/img-gruas-edificios.jpg" alt="" width="832" height="1024" loading="lazy"><h3><span lang="es">Inmobiliario y Registral</span><span lang="en">Real Estate</span></h3></div>
+        <div class="tile-body">
+          <span class="ref"><span lang="es">Ley 108-05 de Registro Inmobiliario</span><span lang="en">Law 108-05 on Real Estate Registry</span></span>
+          <p><span lang="es">Verificamos y documentamos operaciones inmobiliarias para que la titularidad quede segura y registrada.</span><span lang="en">We verify and document real estate transactions so title is secure and registered.</span></p>
+          <ul>
+            <li><span lang="es">Due diligence, compraventas e hipotecas</span><span lang="en">Due diligence, purchases, mortgages</span></li>
+            <li><span lang="es">Trámites ante el Registro de Títulos</span><span lang="en">Title Registry filings</span></li>
+            <li><span lang="es">Embargos inmobiliarios</span><span lang="en">Real estate foreclosures</span></li>
+          </ul>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="ph"><img src="assets/img-sello-notarial.jpg" alt="" width="753" height="1024" loading="lazy"><h3><span lang="es">Servicios Notariales</span><span lang="en">Notarial Services</span></h3></div>
+        <div class="tile-body">
+          <span class="ref"><span lang="es">Ley 140-15 del Notariado</span><span lang="en">Law 140-15 on Notaries</span></span>
+          <p><span lang="es">Nuestro socio director es notario público. Instrumentamos sus documentos con el rigor formal que exige la ley.</span><span lang="en">Our managing partner is a notary public. We execute your documents with the formal rigor the law requires.</span></p>
+          <ul>
+            <li><span lang="es">Actos auténticos y declaraciones juradas</span><span lang="en">Notarial deeds and sworn statements</span></li>
+            <li><span lang="es">Poderes y legalización de firmas</span><span lang="en">Powers of attorney, signature certification</span></li>
+            <li><span lang="es">Actas de comprobación</span><span lang="en">Certifications of fact</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dual" aria-label="Tradición jurídica">
+  <figure>
+    <div class="ph"><img src="assets/img-sala-audiencias.jpg" alt="Sala de audiencias de un tribunal" width="1024" height="768" loading="lazy"></div>
+    <figcaption>
+      <span class="kicker"><span lang="es">Tradición civilista</span><span lang="en">Civil-law tradition</span></span>
+      <h3><span lang="es">Nuestro derecho nace del Código francés.</span><span lang="en">Our law descends from the French Code.</span></h3>
+      <p><span lang="es">Litigamos con el rigor de la doctrina y la jurisprudencia que dieron origen al Código Civil dominicano.</span><span lang="en">We litigate with the rigor of the doctrine and case law behind the Dominican Civil Code.</span></p>
+    </figcaption>
+  </figure>
+  <figure>
+    <div class="ph"><img src="assets/img-bolsa-ny.jpg" alt="Fachada de la Bolsa de Valores de Nueva York" width="600" height="800" loading="lazy"></div>
+    <figcaption>
+      <span class="kicker"><span lang="es">Visión internacional</span><span lang="en">International view</span></span>
+      <h3><span lang="es">Los negocios hablan el idioma del comercio global.</span><span lang="en">Business speaks the language of global trade.</span></h3>
+      <p><span lang="es">Preparamos contratos y arbitrajes para operaciones con socios e inversionistas de otras jurisdicciones.</span><span lang="en">We prepare contracts and arbitrations for deals with partners and investors from other jurisdictions.</span></p>
+    </figcaption>
+  </figure>
+</section>
+
+<section class="section mist" id="fideicomisos">
+  <div class="wrap">
+    <h2 class="title"><span lang="es">Fideicomisos: cuatro figuras, una misma garantía</span><span lang="en">Trusts: four structures, one guarantee</span></h2>
+    <p class="intro"><span lang="es">El fideicomiso separa un patrimonio para un fin determinado y lo pone en manos de un fiduciario. Estas son las figuras que más estructuramos bajo la Ley 189-11.</span><span lang="en">A trust sets assets apart for a specific purpose and places them with a trustee. These are the structures we most often build under Law 189-11.</span></p>
+    <div class="trusts">
+      <article class="trust">
+        <div class="ph"><img src="assets/img-boveda-2.jpg" alt="" width="1024" height="768" loading="lazy"></div>
+        <div class="trust-body"><span class="n">01</span><h3><span lang="es">De administración</span><span lang="en">Management trust</span></h3><p><span lang="es">Un tercero profesional administra bienes y rentas según instrucciones claras, también para la planificación sucesoral.</span><span lang="en">A professional third party manages assets and income under clear instructions, including for estate planning.</span></p></div>
+      </article>
+      <article class="trust">
+        <div class="ph"><img src="assets/img-grua.jpg" alt="" width="1024" height="768" loading="lazy" style="object-position: 30% 50%"></div>
+        <div class="trust-body"><span class="n">02</span><h3><span lang="es">Inmobiliario</span><span lang="en">Real estate trust</span></h3><p><span lang="es">Desarrolla proyectos de construcción protegiendo los aportes de compradores, inversionistas y bancos.</span><span lang="en">Develops construction projects while protecting the contributions of buyers, investors and banks.</span></p></div>
+      </article>
+      <article class="trust">
+        <div class="ph"><img src="assets/img-firma.jpg" alt="" width="1024" height="768" loading="lazy"></div>
+        <div class="trust-body"><span class="n">03</span><h3><span lang="es">De garantía</span><span lang="en">Security trust</span></h3><p><span lang="es">Asegura el pago de una obligación con bienes separados del deudor y una ejecución más ágil.</span><span lang="en">Secures an obligation with assets set apart from the debtor and faster enforcement.</span></p></div>
+      </article>
+      <article class="trust">
+        <div class="ph"><img src="assets/img-torre.jpg" alt="" width="683" height="1024" loading="lazy"></div>
+        <div class="trust-body"><span class="n">04</span><h3><span lang="es">Corporativo y societario</span><span lang="en">Corporate trust</span></h3><p><span lang="es">Ordena la tenencia de acciones o cuotas y los derechos de voto entre socios y familias empresarias.</span><span lang="en">Organizes the holding of shares and voting rights among partners and business families.</span></p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="strip" aria-label="Reconocimientos">
+  <div class="wrap">
+    <ul>
+      <li><q><span lang="es">The Law Awards 2025</span><span lang="en">The Law Awards 2025</span></q><small>Latin American Quality Institute</small></li>
+      <li><q><span lang="es">Certificación Q-ESG</span><span lang="en">Q-ESG Certification</span></q><small><span lang="es">LAQI Impact Summit, 2025</span><span lang="en">LAQI Impact Summit, 2025</span></small></li>
+      <li><q><span lang="es">Seleccionada, Excellence in Law Awards</span><span lang="en">Selected, Excellence in Law Awards</span></q><small><span lang="es">Quality Festival, Panamá, 2025</span><span lang="en">Quality Festival, Panama, 2025</span></small></li>
+      <li><q><span lang="es">Más de 20 años de ejercicio</span><span lang="en">More than 20 years of practice</span></q><small><span lang="es">Socio director, litigio civil y comercial</span><span lang="en">Managing partner, civil and commercial litigation</span></small></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section mist" id="socios">
+  <div class="wrap">
+    <h2 class="title"><span lang="es">Nuestro equipo</span><span lang="en">Our team</span></h2>
+    <p class="intro"><span lang="es">Los socios dirigen cada mandato, con responsables por área de práctica.</span><span lang="en">The partners lead every engagement, with a lead for each practice area.</span></p>
+
+    <h3 class="sub-title"><span lang="es">Socios</span><span lang="en">Partners</span></h3>
+    <div class="partners">
+      <article class="partner">
+        <div class="portrait"><img src="assets/jperalta.jpg" alt="Lic. Jonathan Abel Peralta Peña" width="480" height="600" loading="lazy"></div>
+        <div class="partner-body">
+          <div>
+            <h3>Lic. Jonathan Abel Peralta Peña</h3>
+            <div class="role"><span lang="es">Socio Gerente · Director Legal</span><span lang="en">Managing Partner · Legal Director</span></div>
+          </div>
+          <p><span lang="es">Abogado y notario público con más de veinte años de ejercicio en litigación civil, arbitraje comercial, contratos y derecho inmobiliario. Socio fundador de ESLA desde 2022; antes fue Director de Litigios de Staff Legal, SRL (2014–2022).</span><span lang="en">Attorney and notary public with more than twenty years of practice in civil litigation, commercial arbitration, contracts and real estate. Founding partner of ESLA since 2022; previously Head of Litigation at Staff Legal, SRL (2014–2022).</span></p>
+          <details class="cv">
+            <summary><span lang="es">Formación y colegiatura</span><span lang="en">Education and admissions</span></summary>
+            <dl>
+              <dt><span lang="es">Formación</span><span lang="en">Education</span></dt>
+              <dd><ul>
+                <li><span lang="es">Magíster en Derecho Constitucional y Procesal Constitucional, PUCMM (2019)</span><span lang="en">Master's in Constitutional Law and Procedure, PUCMM (2019)</span></li>
+                <li><span lang="es">Máster en Derecho y Procedimiento Civil, UASD (2007)</span><span lang="en">Master's in Civil Law and Procedure, UASD (2007)</span></li>
+                <li><span lang="es">Licenciado en Derecho, Magna Cum Laude, UTESA (2004)</span><span lang="en">Law degree, Magna Cum Laude, UTESA (2004)</span></li>
+                <li><span lang="es">Postgrado en Dirección Pública, Barna Management School (2024–2025)</span><span lang="en">Postgraduate in Public Management, Barna Management School (2024–2025)</span></li>
+              </ul></dd>
+              <dt><span lang="es">Notario</span><span lang="en">Notary</span></dt><dd><span lang="es">Notario público</span><span lang="en">Notary public</span></dd>
+              <dt><span lang="es">Docencia</span><span lang="en">Teaching</span></dt><dd><span lang="es">Profesor de Derecho Notarial, UNICARIBE; docente en la UTE</span><span lang="en">Professor of Notarial Law, UNICARIBE; lecturer at UTE</span></dd>
+              <dt><span lang="es">Correo</span><span lang="en">Email</span></dt><dd>jperalta@eslard.com</dd>
+            </dl>
+          </details>
+        </div>
+      </article>
+      <article class="partner">
+        <div class="portrait">
+          <img src="assets/mestevez.jpg" alt="Licda. Miriam Estévez Lavandier" width="480" height="600" loading="lazy">
+        </div>
+        <div class="partner-body">
+          <div>
+            <h3>Licda. Miriam Estévez Lavandier</h3>
+            <div class="role"><span lang="es">Socia Gerente · Abogada Litigante y Consultora Corporativa</span><span lang="en">Managing Partner · Trial Lawyer and Corporate Counsel</span></div>
+          </div>
+          <p><span lang="es">Abogada litigante y consultora corporativa, con experiencia en litigio civil, comercial y penal, y en la estructuración de negocios. Socia fundadora de ESLA, donde dirige la gestión general y administrativa de la firma. Antes fue cofundadora y gerente administrativa de Stephen &amp; Estévez Abogados Consultores y gerente de administración de Staff Legal, SRL.</span><span lang="en">Trial lawyer and corporate counsel with experience in civil, commercial and criminal litigation and in business structuring. Founding partner of ESLA, where she leads the firm's general management and administration. She previously co-founded and managed Stephen &amp; Estévez Abogados Consultores and served as head of administration at Staff Legal, SRL.</span></p>
+          <details class="cv">
+            <summary><span lang="es">Formación y colegiatura</span><span lang="en">Education and admissions</span></summary>
+            <dl>
+              <dt><span lang="es">Formación</span><span lang="en">Education</span></dt>
+              <dd><ul>
+                <li><span lang="es">Licenciada en Derecho, Magna Cum Laude, Universidad del Caribe (UNICARIBE)</span><span lang="en">Law degree, Magna Cum Laude, Universidad del Caribe (UNICARIBE)</span></li>
+                <li><span lang="es">Diplomado en Vías de Ejecución Civil, Fundación Derecho Constitucional y Comunitario</span><span lang="en">Diploma in Civil Enforcement Proceedings, Fundación Derecho Constitucional y Comunitario</span></li>
+                <li><span lang="es">Especialización en Incidentes del Procedimiento Civil, Gaceta Judicial</span><span lang="en">Specialization in Civil Procedure Motions, Gaceta Judicial</span></li>
+                <li><span lang="es">Técnicas Avanzadas de Litigación Penal, FUNDEH</span><span lang="en">Advanced Criminal Trial Advocacy, FUNDEH</span></li>
+              </ul></dd>
+              <dt><span lang="es">Idiomas</span><span lang="en">Languages</span></dt><dd><span lang="es">Español (nativo); inglés e italiano (nivel medio)</span><span lang="en">Spanish (native); English and Italian (intermediate)</span></dd>
+              <dt><span lang="es">Correo</span><span lang="en">Email</span></dt><dd>mestevez@eslard.com</dd>
+            </dl>
+          </details>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="sub-title"><span lang="es">Asociados</span><span lang="en">Associates</span></h3>
+    <div class="partners">
+      <article class="partner">
+        <div class="portrait"><img src="assets/jguerrero.jpg" alt="Licda. Jennifer Carolina Guerrero Castellanos" width="480" height="600" loading="lazy"></div>
+        <div class="partner-body">
+          <div>
+            <h3>Licda. Jennifer Carolina Guerrero Castellanos</h3>
+            <div class="role"><span lang="es">Senior · Corporativo y Societario</span><span lang="en">Senior Associate · Corporate</span></div>
+          </div>
+          <p><span lang="es">Abogada con experiencia en derecho societario, inmobiliario y comercial: estatutos y actas de asamblea, registros mercantiles, debida diligencia y compraventa de inmuebles, y trámites ante la Jurisdicción Inmobiliaria. Ha participado también en recuperación de cartera y en litigios civiles, comerciales y laborales.</span><span lang="en">Lawyer with experience in corporate, real estate and commercial law: bylaws and shareholder minutes, commercial registry filings, property due diligence and purchases, and Land Court filings. She has also worked on debt recovery and on civil, commercial and labor litigation.</span></p>
+          <details class="cv">
+            <summary><span lang="es">Formación</span><span lang="en">Education</span></summary>
+            <dl>
+              <dt><span lang="es">Formación</span><span lang="en">Education</span></dt>
+              <dd><ul>
+                <li><span lang="es">Licenciada en Derecho, UNPHU (2021)</span><span lang="en">Law degree, UNPHU (2021)</span></li>
+                <li><span lang="es">Seminario Negocios Inmobiliarios y Seguridad Jurídica, UNIBE</span><span lang="en">Seminar on Real Estate Transactions and Legal Certainty, UNIBE</span></li>
+                <li><span lang="es">Contratos, venta y alquiler de inmuebles, Academia Jurídica Nacional</span><span lang="en">Contracts, property sales and leases, Academia Jurídica Nacional</span></li>
+                <li><span lang="es">Licitaciones públicas, R&amp;R División de Entrenamiento</span><span lang="en">Public procurement, R&amp;R Training Division</span></li>
+              </ul></dd>
+              <dt><span lang="es">Idiomas</span><span lang="en">Languages</span></dt><dd><span lang="es">Español; inglés</span><span lang="en">Spanish; English</span></dd>
+              <dt><span lang="es">Correo</span><span lang="en">Email</span></dt><dd>jguerrero@eslard.com</dd>
+            </dl>
+          </details>
+        </div>
+      </article>
+      <article class="partner">
+        <div class="portrait"><img src="assets/npena.jpg" alt="Lic. Noa Penier Peña Gómez" width="480" height="600" loading="lazy"><span class="note pend"><span lang="es">Foto provisional</span><span lang="en">Temporary photo</span></span></div>
+        <div class="partner-body">
+          <div>
+            <h3>Lic. Noa Penier Peña Gómez</h3>
+            <div class="role"><span lang="es">Abogado · Cobros y Recuperación</span><span lang="en">Associate · Debt Collection</span></div>
+          </div>
+          <p><span lang="es">Abogado con experiencia en derecho civil, inmobiliario y laboral, y en relaciones laborales dentro de empresas. Ha ejercido de forma independiente y en firmas legales.</span><span lang="en">Lawyer with experience in civil, real estate and labor law, and in corporate labor relations. He has practiced independently and with law firms.</span></p>
+          <details class="cv">
+            <summary><span lang="es">Formación</span><span lang="en">Education</span></summary>
+            <dl>
+              <dt><span lang="es">Formación</span><span lang="en">Education</span></dt>
+              <dd><ul>
+                <li><span lang="es">Licenciado en Derecho, Universidad Católica Santo Domingo (2013)</span><span lang="en">Law degree, Universidad Católica Santo Domingo (2013)</span></li>
+                <li><span lang="es">Diplomado en Derecho Laboral y Seguridad Social, FUNJEPRO (2019)</span><span lang="en">Diploma in Labor and Social Security Law, FUNJEPRO (2019)</span></li>
+                <li><span lang="es">Diplomado en Derecho Inmobiliario, UASD (2014)</span><span lang="en">Diploma in Real Estate Law, UASD (2014)</span></li>
+                <li><span lang="es">Maestría en Gestión de Recursos Humanos, UNAPEC (en curso)</span><span lang="en">Master's in Human Resources Management, UNAPEC (in progress)</span></li>
+              </ul></dd>
+              <dt><span lang="es">Idiomas</span><span lang="en">Languages</span></dt><dd><span lang="es">Español; inglés avanzado</span><span lang="en">Spanish; advanced English</span></dd>
+              <dt><span lang="es">Correo</span><span lang="en">Email</span></dt><dd>npena@eslard.com</dd>
+            </dl>
+          </details>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="sub-title"><span lang="es">Responsables por área</span><span lang="en">Practice leads</span></h3>
+    <ul class="areas-lead">
+        <li><span><span lang="es">Dirección Legal</span><span lang="en">Legal Director</span></span><span>Lic. Jonathan Abel Peralta Peña</span></li>
+        <li><span><span lang="es">Gestión Administrativa y Clientes</span><span lang="en">Administration and Clients</span></span><span>Licda. Miriam Estévez Lavandier</span></li>
+        <li><span><span lang="es">Senior · Corporativo y Societario</span><span lang="en">Senior Associate · Corporate</span></span><span>Licda. Jennifer Carolina Guerrero Castellanos</span></li>
+        <li><span><span lang="es">Dirección de Litigios · Litigación y Arbitraje</span><span lang="en">Head of Litigation and Arbitration</span></span><span>Lic. Jonathan Abel Peralta Peña</span></li>
+        <li><span><span lang="es">Cobros y Recuperación</span><span lang="en">Debt Collection</span></span><span>Lic. Jonathan Abel Peralta Peña<br>Lic. Noa Penier Peña Gómez</span></li>
+        <li><span><span lang="es">Servicios Notariales</span><span lang="en">Notarial Services</span></span><span>Lic. Jonathan Abel Peralta Peña</span></li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="section" id="legislacion">
+  <div class="wrap">
+    <h2 class="title"><span lang="es">Legislación de interés</span><span lang="en">Key legislation</span></h2>
+    <p class="intro"><span lang="es">Las normas que más consultan nuestros clientes, con enlace al texto oficial publicado por la Consultoría Jurídica del Poder Ejecutivo.</span><span lang="en">The laws our clients consult most, with links to the official text published by the Legal Counsel of the Executive Branch.</span></p>
+    <div class="laws">
+      <div class="law-group">
+        <h3><span lang="es">Empresa e inversión</span><span lang="en">Business and investment</span></h3>
+        <ul>
+          <li><span class="law-no">Ley 479-08</span><span class="law-name"><span lang="es">General de las Sociedades Comerciales y Empresas Individuales de Responsabilidad Limitada</span><span lang="en">Commercial Companies and Single-Owner LLCs</span></span><span class="law-note"><span lang="es">Modificada por la Ley 31-11; art. 91 modificado por la Ley 68-19</span><span lang="en">Amended by Law 31-11; art. 91 amended by Law 68-19</span></span><a class="law-link" href="https://www.consultoria.gov.do/Consulta/Home/FileManagement?managementType=1&amp;documentId=3356145" target="_blank" rel="noopener"><span lang="es">Texto oficial ↗</span><span lang="en">Official text ↗</span></a></li>
+          <li><span class="law-no">Ley 3-02</span><span class="law-name"><span lang="es">Sobre Registro Mercantil</span><span lang="en">Commercial Registry</span></span></li>
+          <li><span class="law-no">Ley 16-95</span><span class="law-name"><span lang="es">Sobre Inversión Extranjera</span><span lang="en">Foreign Investment</span></span><span class="law-note"><span lang="es">Reglamento de aplicación: Decreto 214-04</span><span lang="en">Implementing regulation: Decree 214-04</span></span></li>
+          <li><span class="law-no">Ley 122-05</span><span class="law-name"><span lang="es">Sobre Regulación y Fomento de las Asociaciones sin Fines de Lucro (fundaciones y asociaciones)</span><span lang="en">Non-Profit Associations (foundations and associations)</span></span><span class="law-note"><span lang="es">Reglamento de aplicación: Decreto 40-08</span><span lang="en">Implementing regulation: Decree 40-08</span></span></li>
+          <li><span class="law-no">Ley 141-15</span><span class="law-name"><span lang="es">De Reestructuración y Liquidación de Empresas y Personas Físicas Comerciantes</span><span lang="en">Restructuring and Liquidation of Companies and Merchants</span></span><a class="law-link" href="https://www.consultoria.gov.do/Consulta/Home/FileManagement?managementType=1&amp;documentId=3374330" target="_blank" rel="noopener"><span lang="es">Texto oficial ↗</span><span lang="en">Official text ↗</span></a></li>
+        </ul>
+      </div>
+      <div class="law-group">
+        <h3><span lang="es">Patrimonio, fideicomiso e inmuebles</span><span lang="en">Wealth, trusts and real estate</span></h3>
+        <ul>
+          <li><span class="law-no">Ley 189-11</span><span class="law-name"><span lang="es">Para el Desarrollo del Mercado Hipotecario y el Fideicomiso</span><span lang="en">Mortgage Market Development and Trusts</span></span><span class="law-note"><span lang="es">Arts. 129 y 131 modificados por la Ley 195-19</span><span lang="en">Arts. 129 and 131 amended by Law 195-19</span></span><a class="law-link" href="https://www.consultoria.gov.do/Consulta/Home/FileManagement?managementType=1&amp;documentId=3367031" target="_blank" rel="noopener"><span lang="es">Texto oficial ↗</span><span lang="en">Official text ↗</span></a></li>
+          <li><span class="law-no">Ley 108-05</span><span class="law-name"><span lang="es">De Registro Inmobiliario</span><span lang="en">Real Estate Registry</span></span><a class="law-link" href="https://www.consultoria.gov.do/Consulta/Home/FileManagement?managementType=1&amp;documentId=3339312" target="_blank" rel="noopener"><span lang="es">Texto oficial ↗</span><span lang="en">Official text ↗</span></a></li>
+          <li><span class="law-no">Ley 158-01</span><span class="law-name"><span lang="es">De Fomento al Desarrollo Turístico (CONFOTUR)</span><span lang="en">Tourism Development Incentives (CONFOTUR)</span></span><span class="law-note"><span lang="es">Y sus modificaciones; reglamento: Decreto 372-14</span><span lang="en">As amended; regulation: Decree 372-14</span></span></li>
+          <li><span class="law-no">Ley 285-04</span><span class="law-name"><span lang="es">General de Migración</span><span lang="en">General Migration Law</span></span><span class="law-note"><span lang="es">Reglamento 631-11: residencia por inversión</span><span lang="en">Regulation 631-11: residency by investment</span></span></li>
+        </ul>
+      </div>
+      <div class="law-group">
+        <h3><span lang="es">Litigio y materia penal</span><span lang="en">Litigation and criminal law</span></h3>
+        <ul>
+          <li><span class="law-no">Ley 2-23</span><span class="law-name"><span lang="es">Sobre Recurso de Casación</span><span lang="en">Cassation Appeals</span></span><a class="law-link" href="https://www.consultoria.gov.do/Consulta/Home/FileManagement?managementType=1&amp;documentId=3400589" target="_blank" rel="noopener"><span lang="es">Texto oficial ↗</span><span lang="en">Official text ↗</span></a></li>
+          <li><span class="law-no">Ley 74-25</span><span class="law-name"><span lang="es">Orgánica que instituye el Código Penal de la República Dominicana</span><span lang="en">Organic Law establishing the Dominican Criminal Code</span></span><span class="law-note"><span lang="es">Entró en vigencia doce meses después de su promulgación (agosto de 2025)</span><span lang="en">In force twelve months after its enactment (August 2025)</span></span><a class="law-link" href="https://www.consultoria.gov.do/Consulta/Home/FileManagement?managementType=1&amp;documentId=3403537" target="_blank" rel="noopener"><span lang="es">Texto oficial ↗</span><span lang="en">Official text ↗</span></a></li>
+          <li><span class="law-no">Ley 97-25</span><span class="law-name"><span lang="es">Orgánica que instituye el Código Procesal Penal de la República Dominicana</span><span lang="en">Organic Law establishing the Criminal Procedure Code</span></span><span class="law-note"><span lang="es">G. O. núm. 11221, del 8 de diciembre de 2025</span><span lang="en">Official Gazette no. 11221, December 8, 2025</span></span><a class="law-link" href="https://www.consultoria.gov.do/Consulta/Home/FileManagement?managementType=1&amp;documentId=3404020" target="_blank" rel="noopener"><span lang="es">Texto oficial ↗</span><span lang="en">Official text ↗</span></a></li>
+          <li><span class="law-no">Ley 155-17</span><span class="law-name"><span lang="es">Contra el Lavado de Activos y el Financiamiento del Terrorismo</span><span lang="en">Anti-Money Laundering and Counter-Terrorist Financing</span></span><a class="law-link" href="https://www.consultoria.gov.do/Consulta/Home/FileManagement?managementType=1&amp;documentId=3383131" target="_blank" rel="noopener"><span lang="es">Texto oficial ↗</span><span lang="en">Official text ↗</span></a></li>
+        </ul>
+      </div>
+      <div class="law-group">
+        <h3><span lang="es">Notariado y cumplimiento</span><span lang="en">Notarial practice and compliance</span></h3>
+        <ul>
+          <li><span class="law-no">Ley 140-15</span><span class="law-name"><span lang="es">Del Notariado e instituye el Colegio Dominicano de Notarios</span><span lang="en">Notaries and the Dominican College of Notaries</span></span><a class="law-link" href="https://www.consultoria.gov.do/Consulta/Home/FileManagement?managementType=1&amp;documentId=3374370" target="_blank" rel="noopener"><span lang="es">Texto oficial ↗</span><span lang="en">Official text ↗</span></a></li>
+          <li><span class="law-no">Ley 172-13</span><span class="law-name"><span lang="es">Sobre Protección Integral de los Datos Personales</span><span lang="en">Personal Data Protection</span></span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="laws-note"><span lang="es">Lista con fines informativos, actualizada a noviembre de 2026. La versión con valor legal es la publicada en la Gaceta Oficial. Antes de aplicar cualquier norma, verifique sus modificaciones posteriores o consúltenos.</span><span lang="en">For information only, updated November 2026. The legally binding version is the one published in the Official Gazette. Check later amendments before relying on any law, or consult us.</span></p>
+  </div>
+</section>
+
+<section class="biz">
+  <img src="assets/img-ciudad-2.jpg" alt="" width="1024" height="681" loading="lazy">
+  <div class="wrap">
+    <h2><span lang="es">¿Quiere invertir o hacer negocios en la República Dominicana?</span><span lang="en">Looking to invest or do business in the Dominican Republic?</span></h2>
+    <p><span lang="es">Le ayudamos a elegir la estructura societaria, revisar los contratos y proteger su inversión desde el primer día.</span><span lang="en">We help you choose the corporate structure, review the contracts and protect your investment from day one. Our partners practice in Spanish.</span></p>
+    <a class="btn btn-gold" href="#contacto"><span lang="es">Hablemos</span><span lang="en">Let's talk</span></a>
+  </div>
+</section>
+
+<section class="help">
+  <div class="wrap">
+    <h2 class="title"><span lang="es">¿Cómo podemos ayudarle?</span><span lang="en">How can we help you?</span></h2>
+    <div class="row">
+      <a class="btn btn-gold" href="#contacto"><span lang="es">Contáctenos</span><span lang="en">Contact us</span></a>
+      <a class="btn btn-navy" href="https://wa.me/18295393700" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <div class="wrap contact">
+    <div>
+      <h2 class="title-left"><span lang="es">Contacto</span><span lang="en">Contact</span></h2>
+      <p style="color:var(--muted);margin:1rem 0 0;max-width:34rem"><span lang="es">Escríbanos o llámenos y le confirmaremos fecha y hora con uno de los socios.</span><span lang="en">Write or call us and we will confirm a date and time with one of the partners. Please note that our partners practice in Spanish.</span></p>
+      <p class="notice">
+        <span lang="es">El envío de información por estos medios no crea una relación abogado-cliente. No comparta datos confidenciales hasta formalizar el mandato. Los datos personales que nos facilite se tratan conforme a la Ley 172-13 sobre Protección de Datos de Carácter Personal.</span>
+        <span lang="en">Contacting us through these channels does not create an attorney-client relationship. Please do not share confidential information until an engagement is formalized. Personal data you provide is handled under Dominican Law 172-13 on Personal Data Protection.</span>
+      </p>
+    </div>
+    <div class="contact-list">
+      <div class="ci"><svg aria-hidden="true"><use href="#i-pin"/></svg><div><span class="k"><span lang="es">Oficina</span><span lang="en">Office</span></span><span class="v">Av. Abraham Lincoln No. 605, Naco, Santo Domingo de Guzmán, Distrito Nacional, República Dominicana, C.P. 10119<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Abraham+Lincoln+605,+Naco,+Santo+Domingo,+10119" target="_blank" rel="noopener"><span lang="es">Ver en el mapa</span><span lang="en">View on map</span></a></span></div><button class="copy" type="button" id="copy-addr" data-copy="Av. Abraham Lincoln No. 605, Naco, Santo Domingo de Guzmán, Distrito Nacional, República Dominicana, C.P. 10119"><span lang="es">Copiar</span><span lang="en">Copy</span></button></div>
+      <div class="ci"><svg aria-hidden="true"><use href="#i-phone"/></svg><div><span class="k"><span lang="es">Teléfono oficina</span><span lang="en">Office phone</span></span><span class="v">+1 (809) 960-2992</span></div><button class="copy" type="button" id="copy-tel" data-copy="+1 (809) 960-2992"><span lang="es">Copiar</span><span lang="en">Copy</span></button></div>
+      <div class="ci"><svg aria-hidden="true"><use href="#i-wa"/></svg><div><span class="k">WhatsApp Business</span><span class="v">+1 (829) 539-3700<br><a href="https://wa.me/18295393700" target="_blank" rel="noopener"><span lang="es">Escribir por WhatsApp</span><span lang="en">Message on WhatsApp</span></a></span></div><button class="copy" type="button" id="copy-wa" data-copy="+1 (829) 539-3700"><span lang="es">Copiar</span><span lang="en">Copy</span></button></div>
+      <div class="ci"><svg aria-hidden="true"><use href="#i-mail"/></svg><div><span class="k"><span lang="es">Correo</span><span lang="en">Email</span></span><span class="v">info@eslard.com</span></div><button class="copy" type="button" id="copy-mail" data-copy="info@eslard.com"><span lang="es">Copiar</span><span lang="en">Copy</span></button></div>
+      <div class="ci"><svg aria-hidden="true"><use href="#i-clock"/></svg><div><span class="k"><span lang="es">Horario</span><span lang="en">Hours</span></span><span class="v"><span lang="es">Lunes a viernes, 8:30 a. m. – 5:00 p. m.</span><span lang="en">Monday to Friday, 8:30 a.m. – 5:00 p.m.</span></span></div><span></span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#inicio" aria-label="ESLA Abogados Consultores"><svg aria-hidden="true"><use href="#esla-mark"/></svg><span class="brand-text"><b>ESLA</b><span>Abogados Consultores</span></span></a>
+        <p><span lang="es">Firma dominicana de derecho mercantil, corporativo y fiduciario, y litigación civil y contractual, dirigida por sus socios.</span><span lang="en">Dominican partner-led firm in commercial, corporate and trust law, and civil and contract litigation.</span></p>
+        <a class="social" href="https://www.instagram.com/esla_rd/" target="_blank" rel="noopener" aria-label="Instagram @esla_rd"><svg aria-hidden="true"><use href="#i-ig"/></svg>@esla_rd</a>
+      </div>
+      <div>
+        <h4><span lang="es">Nuestra firma</span><span lang="en">Our firm</span></h4>
+        <ul>
+          <li><a href="#firma"><span lang="es">La firma</span><span lang="en">The firm</span></a></li>
+          <li><a href="#areas"><span lang="es">Áreas de práctica</span><span lang="en">Practice areas</span></a></li>
+          <li><a href="#socios"><span lang="es">Nuestro equipo</span><span lang="en">Our team</span></a></li>
+          <li><a href="#noticias"><span lang="es">Noticias</span><span lang="en">News</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span lang="es">Ubicación</span><span lang="en">Location</span></h4>
+        <ul>
+          <li>Av. Abraham Lincoln No. 605, Naco</li>
+          <li>Santo Domingo de Guzmán, D.N., <span lang="es">República Dominicana</span><span lang="en">Dominican Republic</span></li>
+          <li><strong><span lang="es">Teléfono:</span><span lang="en">Phone:</span></strong> +1 (809) 960-2992</li>
+          <li><strong><span lang="es">Correo:</span><span lang="en">Email:</span></strong> info@eslard.com</li>
+        </ul>
+      </div>
+    </div>
+    <details class="credits">
+      <summary><span lang="es">Créditos fotográficos</span><span lang="en">Photo credits</span></summary>
+      <ul>
+        <li><span lang="es">Fotografías del equipo y la oficina: ESLA Abogados Consultores. Demás imágenes, con licencia Creative Commons vía Openverse:</span><span lang="en">Team and office photos: ESLA Abogados Consultores. Other images under Creative Commons licenses via Openverse:</span></li>
+        <li>Mallete en sala: «Courtroom One Gavel», Joe Gratz · <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a> · <a href="https://www.flickr.com/photos/63126465@N00/117048243" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Buque portacontenedores: «Container ship», anaulin · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/33411286@N00/1047673820" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Ciudad y puerto: «Hong Kong Skyscrapers», bsterling · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/49304919@N00/4889446455" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Estatua de la Justicia: «Trumbull County Courthouse, Courthouse Square -- &#x27;Lady Justi», Jack W. Pearce · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/52021147@N03/8285098170" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Torres corporativas: «Skyscrapers», Takashi(aes256) · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/46151146@N04/12345755385" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Bóveda bancaria: «Bank Vaults under Hotels in Toronto, Ontario», UnTapping The World · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/24741597@N00/9027029071" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Patio de contenedores: «Cube Depot Container Cover», SteelMaster Buildings · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/35055618@N07/24814285343" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Mallete y libros: «Court Gavel - Judge&#x27;s Gavel - Courtroom», weiss_paarz_photos · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/141290938@N03/26682691294" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Monedas: «UK Money - Coins», Images_of_Money · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/59937401@N07/5475013342" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Monedas (patrimonio): «1921 Morgan Silver Dollar. #money #coins #silverdollar», L.Burchfield · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/59092615@N00/10447342114" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Grúa y edificios: «Construction Crane», dmjarvey · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/28009451@N03/4454178602" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Sello notarial: «notary stamp», BryanAlexander · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/36521954815@N01/46106528365" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Sala de audiencias: «Courtroom», ☺ Lee J Haywood · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/45034206@N06/4289726649" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Bolsa de Nueva York: «New York Stock Exchange», Luigi Rosa · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/30571787@N00/172087436" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Bóveda: «Bank vault dining», Ishrona · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/62301865@N00/252311088" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Grúas de construcción: «Copenhagen construction cranes», kmardahl · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/29050965@N08/17309501136" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Firma de documento: «IMG_1556 Phoua signs contract HAFA FARM», Media Mike Hazard · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/88709139@N08/14990558113" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Torre de cristal: «Chicago skyscrapers (40)», 4nitsirk · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/26223114@N02/7912926206" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Vista urbana: «Our town, Seattle, Washington, view of Hi 5, skyscrapers, to», Wonderlane · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/71401718@N00/4889582028" target="_blank" rel="noopener">Flickr</a></li>
+  <li>Sala de tribunal (penal): «Dan Moody&#x27;s Courtroom - !», Anne Worner · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/28652129@N06/5332677555" target="_blank" rel="noopener">Flickr</a></li>
+      </ul>
+    </details>
+    <div class="foot-bottom">
+      <p><span lang="es">© <span class="yr-now">2026</span> ESLA Abogados Consultores, SRL. Todos los derechos reservados.</span><span lang="en">© <span class="yr-now">2026</span> ESLA Abogados Consultores, SRL. All rights reserved.</span></p>
+      <p><span lang="es">La información de este sitio es general y no constituye asesoría legal.</span><span lang="en">The information on this site is general and is not legal advice.</span></p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/18295393700" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+<button class="draft" id="draft" type="button"><span lang="es"><strong>Borrador.</strong> Lo resaltado en amarillo está pendiente. ✕</span><span lang="en"><strong>Draft.</strong> Yellow highlights are pending. ✕</span></button>
+
+</div>
+
+<script>
+(function () {
+  var app = document.getElementById('app');
+  function setLang(l) {
+    app.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.set === l)); });
+    try { localStorage.setItem('esla-lang', l); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('esla-lang'); } catch (e) {}
+  setLang(saved === 'en' ? 'en' : 'es');
+  document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.set); }); });
+
+  var head = document.getElementById('head');
+  var nav = document.getElementById('nav');
+  var menuBtn = document.getElementById('menu-btn');
+  window.addEventListener('scroll', function () { head.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+  menuBtn.addEventListener('click', function () { var open = nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', String(open)); });
+  nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }); });
+
+  // Slider: first slide is visible at rest; autoplay only when motion is welcome
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var dots = Array.prototype.slice.call(document.querySelectorAll('#dots button'));
+  var cur = 0, timer = null;
+  function show(i) {
+    cur = (i + slides.length) % slides.length;
+    slides.forEach(function (s, k) { s.setAttribute('aria-hidden', String(k !== cur)); });
+    dots.forEach(function (d, k) { d.setAttribute('aria-current', String(k === cur)); });
+  }
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function play() { if (!still) { stop(); timer = setInterval(function () { show(cur + 1); }, 7000); } }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  dots.forEach(function (d, k) { d.addEventListener('click', function () { show(k); play(); }); });
+  document.getElementById('prev').addEventListener('click', function () { show(cur - 1); play(); });
+  document.getElementById('next').addEventListener('click', function () { show(cur + 1); play(); });
+  var slider = document.getElementById('slider');
+  slider.addEventListener('mouseenter', stop);
+  slider.addEventListener('mouseleave', play);
+  play();
+
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.dataset.copy;
+      var es = app.getAttribute('data-lang') === 'es';
+      function done(ok) {
+        var old = btn.innerHTML;
+        btn.textContent = ok ? (es ? 'Copiado' : 'Copied') : (es ? 'Seleccionado' : 'Selected');
+        setTimeout(function () { btn.innerHTML = old; }, 1600);
+      }
+      function fallback() {
+        var v = btn.parentElement.querySelector('.v');
+        var r = document.createRange(); r.selectNodeContents(v);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        done(false);
+      }
+      try { navigator.clipboard.writeText(text).then(function () { done(true); }, fallback); } catch (e) { fallback(); }
+    });
+  });
+
+  var draft = document.getElementById('draft');
+  draft.addEventListener('click', function () { draft.hidden = true; });
+
+  var y = String(new Date().getFullYear());
+  document.querySelectorAll('.yr-now').forEach(function (el) { el.textContent = y; });
+})();
+</script>
+</body>
+</html>
