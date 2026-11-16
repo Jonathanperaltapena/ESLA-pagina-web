@@ -47,7 +47,6 @@ Descargue el repositorio y abra `index.html` con cualquier navegador.
 
 ## Pendientes
 
-- Foto profesional del Lic. Noa Penier Peña Gómez (la actual es provisional).
 - Enlaces de Facebook, X y LinkedIn, si esas cuentas están activas.
 - Redacción de las seis próximas publicaciones.
 - Quitar el aviso «Borrador» de la página cuando se apruebe la versión final.
