@@ -11,6 +11,7 @@ Es una página única en HTML y CSS, sin dependencias ni proceso de compilación
 |---|---|
 | `index.html` | La página completa: estructura, estilos y el script de idioma, carrusel y menú móvil. |
 | `assets/` | Fotografías de los socios y asociados, imágenes de las áreas de práctica, piezas de prensa y miniaturas de videos. |
+| `leyes/` | Textos oficiales de las leyes en PDF, enlazados desde «Legislación de interés». |
 
 ## Secciones de la página
 
@@ -49,5 +50,5 @@ Descargue el repositorio y abra `index.html` con cualquier navegador.
 
 - Enlaces de Facebook, X y LinkedIn, si esas cuentas están activas.
 - Redacción de las seis próximas publicaciones.
-- Subir los PDF oficiales de las leyes a `leyes/` y enlazarlos desde «Legislación de interés» (el portal de la Consultoría Jurídica no ofrece direcciones fijas por documento).
+- Subir a `leyes/` los PDF oficiales que faltan: 479-08, 3-02, 16-95, 122-05, 141-15, 189-11, 108-05, 158-01, 285-04 (y Reglamento 631-11), 74-25, 97-25, 155-17, 140-15 y 172-13. Ya están: 2-23, 87-26 y 88-26.
 - Quitar el aviso «Borrador» de la página cuando se apruebe la versión final.
