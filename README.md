@@ -21,7 +21,7 @@ Es una página única en HTML y CSS, sin dependencias ni proceso de compilación
 5. Fideicomisos: cuatro figuras
 6. Reconocimientos
 7. Nuestro equipo: socios, asociados y responsables por área
-8. Legislación de interés, con enlaces al texto oficial de la Consultoría Jurídica del Poder Ejecutivo
+8. Legislación de interés, con enlace al portal de la Consultoría Jurídica del Poder Ejecutivo
 9. Contacto
 
 ## Cómo verla en una computadora
@@ -49,4 +49,5 @@ Descargue el repositorio y abra `index.html` con cualquier navegador.
 
 - Enlaces de Facebook, X y LinkedIn, si esas cuentas están activas.
 - Redacción de las seis próximas publicaciones.
+- Subir los PDF oficiales de las leyes a `leyes/` y enlazarlos desde «Legislación de interés» (el portal de la Consultoría Jurídica no ofrece direcciones fijas por documento).
 - Quitar el aviso «Borrador» de la página cuando se apruebe la versión final.
