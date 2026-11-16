@@ -49,6 +49,6 @@ Descargue el repositorio y abra `index.html` con cualquier navegador.
 ## Pendientes
 
 - Enlaces de Facebook, X y LinkedIn, si esas cuentas están activas.
-- Redacción de las seis próximas publicaciones.
-- Subir a `leyes/` los PDF oficiales que faltan: 479-08, 3-02, 16-95, 122-05, 141-15, 189-11, 108-05, 158-01, 285-04 (y Reglamento 631-11), 74-25, 97-25, 155-17, 140-15 y 172-13. Ya están: 2-23, 87-26 y 88-26.
+- Redacción de las siete próximas publicaciones (la prioritaria: responsabilidad penal de las empresas).
+- Subir a `leyes/` los PDF oficiales que faltan: 479-08, 3-02, 16-95, 122-05, 141-15, 108-05, 158-01, 285-04 (y Reglamento 631-11), 74-25, 97-25, 155-17, 140-15 y 172-13. Ya están: 2-23, 87-26, 88-26 y 189-11.
 - Quitar el aviso «Borrador» de la página cuando se apruebe la versión final.
