@@ -11,7 +11,7 @@ Es una página única en HTML y CSS, sin dependencias ni proceso de compilación
 |---|---|
 | `index.html` | La página completa: estructura, estilos y el script de idioma, carrusel y menú móvil. |
 | `assets/` | Fotografías de los socios y asociados, imágenes de las áreas de práctica, piezas de prensa y miniaturas de videos. |
-| `leyes/` | Textos oficiales de las leyes en PDF, enlazados desde «Legislación de interés». |
+| `leyes/` | Textos oficiales de las leyes en PDF, descargados del portal de la Consultoría Jurídica del Poder Ejecutivo y enlazados desde «Legislación de interés». |
 
 ## Secciones de la página
 
@@ -50,5 +50,5 @@ Descargue el repositorio y abra `index.html` con cualquier navegador.
 
 - Enlaces de Facebook, X y LinkedIn, si esas cuentas están activas.
 - Redacción de las siete próximas publicaciones (la prioritaria: responsabilidad penal de las empresas).
-- Subir a `leyes/` los PDF oficiales que faltan: 479-08, 3-02, 16-95, 122-05, 141-15, 108-05, 158-01, 285-04 (y Reglamento 631-11), 74-25, 97-25, 155-17, 140-15 y 172-13. Ya están: 2-23, 87-26, 88-26 y 189-11.
+- Leyes en PDF: completas. El Código Penal (Ley 74-25, más de 26 MB) se enlaza al portal oficial. Faltan, si se desean: Ley 44-26 y Decreto 631-11.
 - Quitar el aviso «Borrador» de la página cuando se apruebe la versión final.
