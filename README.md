@@ -52,5 +52,4 @@ Descargue el repositorio y abra `index.html` con cualquier navegador.
 - Enlaces de Facebook, X y LinkedIn, si esas cuentas están activas.
 - Redacción de las siete próximas publicaciones (la prioritaria: responsabilidad penal de las empresas).
 - Leyes en PDF: completas. El Código Penal (Ley 74-25, más de 26 MB) se enlaza al portal oficial. Faltan, si se desean: Ley 44-26 y Decreto 631-11.
-- Quitar el aviso «Borrador» de la página cuando se apruebe la versión final.
 - Textos consolidados: publicado el de la Ley 189-11 (corte: 17/11/2026; corregido para integrar el art. 361 de la Ley 249-17). Siguiente: Ley 479-08 con sus modificaciones. Cada consolidado debe revisarse de nuevo cuando se publique una ley que lo modifique.

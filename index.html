@@ -27,8 +27,6 @@
   --on-dark: #F2F3F6;
   --on-dark-muted: #B4BBCB;
   --on-dark-line: rgba(255, 255, 255, 0.16);
-  --pend-bg: #FBEBC2;
-  --pend-fg: #5A4100;
   --wa: #1FA855;
   --f-brand: "Cinzel", "Trajan Pro", Georgia, serif;
   --f-head: "Barlow", "Helvetica Neue", Arial, sans-serif;
@@ -54,7 +52,6 @@ img { display: block; max-width: 100%; }
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
 @media (min-width: 760px) { .wrap { padding-left: max(40px, env(safe-area-inset-left, 0px)); padding-right: max(40px, env(safe-area-inset-right, 0px)); } }
-.pend { background: var(--pend-bg); color: var(--pend-fg); padding: 0 0.3em; border-radius: 3px; }
 
 h1, h2, h3 { font-family: var(--f-head); font-weight: 400; text-wrap: balance; margin: 0; letter-spacing: -0.005em; }
 .title { text-align: center; font-size: clamp(2rem, 3.6vw, 2.75rem); line-height: 1.15; }
@@ -383,19 +380,13 @@ footer p { margin: 0; }
 footer strong { color: #FFFFFF; font-weight: 600; }
 .foot-bottom { border-top: 1px solid var(--on-dark-line); padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; justify-content: space-between; font-size: 0.75rem; }
 
-/* Floating WhatsApp and review note */
+/* Floating WhatsApp button */
 .wa-float {
   position: fixed; z-index: 15; width: 3.5rem; height: 3.5rem; border-radius: 50%;
   right: calc(1.25rem + env(safe-area-inset-right, 0px)); bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
   display: grid; place-items: center; background: var(--wa); color: #FFFFFF; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
 }
 .wa-float svg { width: 1.75rem; height: 1.75rem; }
-.draft {
-  position: fixed; z-index: 15; left: calc(1rem + env(safe-area-inset-left, 0px)); bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
-  max-width: min(22rem, calc(100vw - 6.5rem)); background: var(--pend-bg); color: var(--pend-fg);
-  font: 500 0.75rem/1.4 var(--f-body); padding: 0.6rem 0.8rem; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  border: 0; text-align: left; cursor: pointer;
-}
 </style>
 <style>html, body { margin: 0; } [hidden] { display: none !important; }</style>
 </head>
@@ -1060,7 +1051,6 @@ footer strong { color: #FFFFFF; font-weight: 600; }
 </footer>
 
 <a class="wa-float" href="https://wa.me/18295393700" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
-<button class="draft" id="draft" type="button"><span lang="es"><strong>Borrador.</strong> Lo resaltado en amarillo está pendiente. ✕</span><span lang="en"><strong>Draft.</strong> Yellow highlights are pending. ✕</span></button>
 
 </div>
 
@@ -1132,9 +1122,6 @@ footer strong { color: #FFFFFF; font-weight: 600; }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
-
-  var draft = document.getElementById('draft');
-  draft.addEventListener('click', function () { draft.hidden = true; });
 
   var y = String(new Date().getFullYear());
   document.querySelectorAll('.yr-now').forEach(function (el) { el.textContent = y; });
