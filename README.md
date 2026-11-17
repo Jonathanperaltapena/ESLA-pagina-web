@@ -12,6 +12,7 @@ Es una página única en HTML y CSS, sin dependencias ni proceso de compilación
 | `index.html` | La página completa: estructura, estilos y el script de idioma, carrusel y menú móvil. |
 | `assets/` | Fotografías de los socios y asociados, imágenes de las áreas de práctica, piezas de prensa y miniaturas de videos. |
 | `leyes/` | Textos oficiales de las leyes en PDF, descargados del portal de la Consultoría Jurídica del Poder Ejecutivo y enlazados desde «Legislación de interés». |
+| `leyes/consolidadas/` | Textos consolidados **no oficiales** preparados por ESLA y aprobados por el Lic. Jonathan Abel Peralta Peña antes de publicarse. Cada uno indica su fecha de corte, las leyes modificatorias que integra y que prevalece la Gaceta Oficial. Solo integran leyes, no reglamentos. |
 
 ## Secciones de la página
 
@@ -52,3 +53,4 @@ Descargue el repositorio y abra `index.html` con cualquier navegador.
 - Redacción de las siete próximas publicaciones (la prioritaria: responsabilidad penal de las empresas).
 - Leyes en PDF: completas. El Código Penal (Ley 74-25, más de 26 MB) se enlaza al portal oficial. Faltan, si se desean: Ley 44-26 y Decreto 631-11.
 - Quitar el aviso «Borrador» de la página cuando se apruebe la versión final.
+- Textos consolidados: publicado el de la Ley 189-11 (corte: 16/11/2026). Siguiente: Ley 479-08 con sus modificaciones. Cada consolidado debe revisarse de nuevo cuando se publique una ley que lo modifique.
