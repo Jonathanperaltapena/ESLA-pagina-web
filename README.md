@@ -19,7 +19,7 @@ Es una página única en HTML y CSS, sin dependencias ni proceso de compilación
 1. Portada con carrusel de imágenes
 2. La firma
 3. Publicaciones y prensa: Revista Mercado, Best Lawyers II, entrevistas en video y próximas publicaciones
-4. Áreas de práctica (9 áreas)
+4. Áreas de práctica (10 áreas)
 5. Fideicomisos: cuatro figuras
 6. Reconocimientos
 7. Nuestro equipo: socios, asociados y responsables por área

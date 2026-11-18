@@ -159,6 +159,7 @@ footer .social svg { width: 1.25rem; height: 1.25rem; color: var(--gold-soft); }
 @media (min-width: 640px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1020px) { .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .tile { display: grid; grid-template-rows: auto 1fr; background: var(--paper); border: 1px solid var(--line); min-width: 0; }
+@media (min-width: 1020px) { .tile:last-child:nth-child(3n+1) { grid-column: 2; } }
 .tile .ph { aspect-ratio: 4 / 3; }
 .tile .ph::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21, 30, 51, 0) 35%, rgba(21, 30, 51, 0.88) 100%); }
 .tile:hover .ph img { transform: scale(1.06); }
@@ -717,6 +718,19 @@ footer strong { color: #FFFFFF; font-weight: 600; }
           </ul>
         </div>
       </article>
+      <article class="tile">
+        <div class="ph"><img src="assets/img-familia.jpg" alt="" width="1024" height="683" loading="lazy"><h3><span lang="es">Familia y Adopciones</span><span lang="en">Family Law and Adoptions</span></h3></div>
+        <div class="tile-body">
+          <span class="ref"><span lang="es">Código Civil; Ley 1306-bis sobre Divorcio; Ley 136-03, Código de Niños, Niñas y Adolescentes</span><span lang="en">Civil Code; Law 1306-bis on Divorce; Law 136-03, Children's Code</span></span>
+          <p><span lang="es">Acompañamos a las familias en los momentos que más exigen prudencia y reserva, buscando acuerdos antes que conflictos.</span><span lang="en">We guide families through the moments that most call for discretion and care, seeking agreement before conflict.</span></p>
+          <ul>
+            <li><span lang="es">Divorcio y partición de la comunidad</span><span lang="en">Divorce and division of marital property</span></li>
+            <li><span lang="es">Guarda, visitas y pensión alimentaria</span><span lang="en">Custody, visitation and child support</span></li>
+            <li><span lang="es">Adopciones ante el CONANI</span><span lang="en">Adoptions before CONANI</span></li>
+            <li><span lang="es">Capitulaciones matrimoniales</span><span lang="en">Prenuptial agreements</span></li>
+          </ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -940,6 +954,7 @@ footer strong { color: #FFFFFF; font-weight: 600; }
         <li><span><span lang="es">Dirección de Litigios · Litigación y Arbitraje</span><span lang="en">Head of Litigation and Arbitration</span></span><span>Lic. Jonathan Abel Peralta Peña</span></li>
         <li><span><span lang="es">Cobros y Recuperación</span><span lang="en">Debt Collection</span></span><span>Lic. Jonathan Abel Peralta Peña<br>Lic. Noa Penier Peña Gómez</span></li>
         <li><span><span lang="es">Servicios Notariales</span><span lang="en">Notarial Services</span></span><span>Lic. Jonathan Abel Peralta Peña</span></li>
+        <li><span><span lang="es">Familia y Adopciones</span><span lang="en">Family Law and Adoptions</span></span><span>Licda. Alessandra Agostino Estévez</span></li>
     </ul>
 
   </div>
@@ -1077,6 +1092,7 @@ footer strong { color: #FFFFFF; font-weight: 600; }
         <li>Monedas (patrimonio): «1921 Morgan Silver Dollar. #money #coins #silverdollar», L.Burchfield · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/59092615@N00/10447342114" target="_blank" rel="noopener">Flickr</a></li>
         <li>Grúa y edificios: «Construction Crane», dmjarvey · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/28009451@N03/4454178602" target="_blank" rel="noopener">Flickr</a></li>
         <li>Sello notarial: «notary stamp», BryanAlexander · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/36521954815@N01/46106528365" target="_blank" rel="noopener">Flickr</a></li>
+        <li>Familia en la playa: «Family Silhouette», Weekend Wayfarers · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/135146612@N03/21242605585" target="_blank" rel="noopener">Flickr</a></li>
         <li>Sala de audiencias: «Courtroom», ☺ Lee J Haywood · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/45034206@N06/4289726649" target="_blank" rel="noopener">Flickr</a></li>
         <li>Bolsa de Nueva York: «New York Stock Exchange», Luigi Rosa · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a> · <a href="https://www.flickr.com/photos/30571787@N00/172087436" target="_blank" rel="noopener">Flickr</a></li>
         <li>Bóveda: «Bank vault dining», Ishrona · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://www.flickr.com/photos/62301865@N00/252311088" target="_blank" rel="noopener">Flickr</a></li>
