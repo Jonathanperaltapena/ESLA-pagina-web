@@ -49,6 +49,7 @@ Descargue el repositorio y abra `index.html` con cualquier navegador.
 
 ## Pendientes
 
+- Área Familia y Adopciones: confirmar con la Licda. Alessandra Agostino Estévez la lista definitiva de servicios (la publicada es provisional) y su formación para su ficha.
 - Enlaces de Facebook, X y LinkedIn, si esas cuentas están activas.
 - Redacción de las siete próximas publicaciones (la prioritaria: responsabilidad penal de las empresas).
 - Leyes en PDF: completas. El Código Penal (Ley 74-25, más de 26 MB) se enlaza al portal oficial. Faltan, si se desean: Ley 44-26 y Decreto 631-11.
