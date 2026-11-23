@@ -11,6 +11,7 @@ Es una página única en HTML y CSS, sin dependencias ni proceso de compilación
 |---|---|
 | `index.html` | La página completa: estructura, estilos y el script de idioma, carrusel y menú móvil. |
 | `assets/` | Fotografías de los socios y asociados, imágenes de las áreas de práctica, piezas de prensa y miniaturas de videos. |
+| `legal.html` | Aviso legal: Términos de uso, Política de privacidad (Ley 172-13) y Política de cookies. Si se agregan analítica, formularios o nuevos proveedores, hay que actualizarla. |
 | `leyes/` | Textos oficiales de las leyes en PDF, descargados del portal de la Consultoría Jurídica del Poder Ejecutivo y enlazados desde «Legislación de interés». |
 | `leyes/consolidadas/` | Textos consolidados **no oficiales** preparados por ESLA y aprobados por el Lic. Jonathan Abel Peralta Peña antes de publicarse. Cada uno indica su fecha de corte, las leyes modificatorias que integra y que prevalece la Gaceta Oficial. Solo integran leyes, no reglamentos. |
 
