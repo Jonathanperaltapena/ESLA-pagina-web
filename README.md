@@ -52,7 +52,6 @@ Descargue el repositorio y abra `index.html` con cualquier navegador.
 
 ## Pendientes
 
-- Foto de la Sra. Franny Jerez Morales (aliada en Filadelfia): por ahora figura con iniciales en la página y en el libro.
 - Área Familia y Adopciones: confirmar con la Licda. Alessandra Agostino Estévez la lista definitiva de servicios (la publicada es provisional) y su formación para su ficha.
 - Enlaces de Facebook, X y LinkedIn, si esas cuentas están activas.
 - Redacción de las siete próximas publicaciones (la prioritaria: responsabilidad penal de las empresas).
