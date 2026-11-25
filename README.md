@@ -12,6 +12,8 @@ Es una página única en HTML y CSS, sin dependencias ni proceso de compilación
 | `index.html` | La página completa: estructura, estilos y el script de idioma, carrusel y menú móvil. |
 | `assets/` | Fotografías de los socios y asociados, imágenes de las áreas de práctica, piezas de prensa y miniaturas de videos. |
 | `legal.html` | Aviso legal: Términos de uso, Política de privacidad (Ley 172-13) y Política de cookies. Si se agregan analítica, formularios o nuevos proveedores, hay que actualizarla. |
+| `impresos/` | Presentación institucional impresa (tipo libro, 20 páginas, tamaño Carta). Se regenera desde `index.html`: `python3 impresos/build_brochure.py` y luego `node impresos/pdf.js`. |
+| `video/` | Scripts del video institucional: `musica.py` (música original), `cuadros.py` y `capturas.js` (cuadros desde el libro) y `montaje.py` (video final). El MP4 y el WAV no se guardan en el repositorio. |
 | `leyes/` | Textos oficiales de las leyes en PDF, descargados del portal de la Consultoría Jurídica del Poder Ejecutivo y enlazados desde «Legislación de interés». |
 | `leyes/consolidadas/` | Textos consolidados **no oficiales** preparados por ESLA y aprobados por el Lic. Jonathan Abel Peralta Peña antes de publicarse. Cada uno indica su fecha de corte, las leyes modificatorias que integra y que prevalece la Gaceta Oficial. Solo integran leyes, no reglamentos. |
 
@@ -50,6 +52,7 @@ Descargue el repositorio y abra `index.html` con cualquier navegador.
 
 ## Pendientes
 
+- Foto de la Sra. Franny Jerez Morales (aliada en Filadelfia): por ahora figura con iniciales en la página y en el libro.
 - Área Familia y Adopciones: confirmar con la Licda. Alessandra Agostino Estévez la lista definitiva de servicios (la publicada es provisional) y su formación para su ficha.
 - Enlaces de Facebook, X y LinkedIn, si esas cuentas están activas.
 - Redacción de las siete próximas publicaciones (la prioritaria: responsabilidad penal de las empresas).

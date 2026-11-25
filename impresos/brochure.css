@@ -196,3 +196,18 @@ dd { margin: 0.02in 0 0; color: var(--text); }
 .back-line { text-align: center; margin: 0.3in auto 0; font-size: 9pt; color: #DCE0EA; }
 .back-small { margin-top: auto; font-size: 6.6pt; line-height: 1.5; color: #9AA3B6; border-top: 0.6pt solid rgba(255,255,255,0.16); padding-top: 0.16in; }
 .back-small b { color: #DCE0EA; }
+
+/* La firma: bloque de perspectiva */
+.duo-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 0.3in; margin-top: 0.28in; padding-top: 0.2in; border-top: 1.2pt solid var(--gold); }
+.duo-mini h3 { font-size: 12.5pt; margin-bottom: 0.05in; }
+.duo-mini p { font-size: 9pt; }
+.firm-photo img { height: 5.2in; }
+/* Aliada en Estados Unidos */
+.ally { display: grid; grid-template-columns: 2.05in 1fr; gap: 0.28in; }
+.ally .portrait { height: 2.6in; background: var(--navy); display: grid; place-items: center; }
+.ally .portrait .initials { font: 300 54pt/1 var(--f-head); letter-spacing: 0.08em; color: var(--gold-soft); }
+.ally h3 { font-size: 16pt; }
+.ally-services { columns: 2; column-gap: 0.35in; list-style: none; padding: 0; margin: 0; }
+.ally-services li { break-inside: avoid; position: relative; padding-left: 0.16in; margin-bottom: 0.07in; color: var(--navy); font-size: 9.4pt; }
+.ally-services li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 0.09in; height: 0.8pt; background: var(--gold); }
+.back-line.small { margin-top: 0.08in; font-size: 8pt; color: #B4BBCB; }

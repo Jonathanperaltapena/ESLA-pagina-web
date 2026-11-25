@@ -83,14 +83,15 @@ team_intro = es(one(r'<p class="intro">(.*?)</p>', team_sec))
 groups = {}
 for title, block in re.findall(r'<h3 class="sub-title"[^>]*>(.*?)</h3>\s*<div class="partners">(.*?)\n    </div>\n', team_sec, re.S):
     people = []
-    for art in re.findall(r'<article class="partner">(.*?)</article>', block, re.S):
+    for art in re.findall(r'<article class="partner[^"]*">(.*?)</article>', block, re.S):
         cv = []
         for dt, dd in re.findall(r"<dt>(.*?)</dt>\s*<dd>(.*?)</dd>", art, re.S):
             lis = re.findall(r"<li>(.*?)</li>", dd, re.S)
             cv.append((es(dt), [es(x) for x in lis] if lis else [es(dd)]))
         people.append(dict(img=one(r'<img src="([^"]+)"', art), name=es(one(r"<h3>(.*?)</h3>", art)),
                            role=es(one(r'<div class="role">(.*?)</div>', art)),
-                           bio=es(one(r"</div>\s*</div>\s*<p>(.*?)</p>", art)), cv=cv))
+                           bio=es(one(r"</div>\s*</div>\s*<p>(.*?)</p>", art)), cv=cv,
+                           note=es(one(r'<p class="ally-note">(.*?)</p>', art))))
     groups[es(title)] = people
 leads = [(es(a), es(b).replace(" Lic.", " · Lic.")) for a, b in re.findall(r"<li><span>(<span lang.*?</span>)</span><span>(.*?)</span></li>", team_sec[team_sec.index("areas-lead"):])]
 leads = [(a, re.sub(r"<br>", " y ", b)) for a, b in leads]
@@ -159,9 +160,9 @@ page(f'''<div class="cover-photo"><img src="../assets/img-justicia.jpg" alt=""><
 </div>''', "cover")
 
 # 2 · Índice
-toc = [("La firma", 3), ("Tradición civilista y visión internacional", 4), ("Áreas de práctica", 5),
-       ("Fideicomisos: cuatro figuras", 10), ("Socios", 11), ("Asociados", 12), ("El equipo y responsables por área", 13),
-       ("Prensa y reconocimientos", 14), ("Entrevistas y publicaciones", 15), ("Próximas publicaciones", 16),
+toc = [("La firma", 3), ("Áreas de práctica", 4),
+       ("Fideicomisos: cuatro figuras", 9), ("Socios", 10), ("Asociados", 11), ("El equipo y responsables por área", 12),
+       ("Aliada en Estados Unidos", 13), ("Prensa y reconocimientos", 14), ("Entrevistas y publicaciones", 15), ("Próximas publicaciones", 16),
        ("Legislación de interés", 17), ("Cómo trabajamos", 18), ("Contacto", 19)]
 page(f'''{h("Contenido", "Índice")}
 <ol class="toc">{"".join(f'<li><span>{e(t)}</span><i></i><b>{p:02d}</b></li>' for t, p in toc)}</ol>
@@ -178,12 +179,8 @@ page(f'''{h("Quiénes somos", "La firma")}
     <li><b>Prevención primero</b><span>El mejor litigio es el que se evita con un buen documento; el que no se puede evitar se prepara desde el primer día.</span></li>
   </ul></div>
   <figure class="firm-photo"><img src="../assets/socios-biblioteca.jpg" alt=""><figcaption>Los socios fundadores, Lic. Jonathan Abel Peralta Peña y Licda. Miriam Estévez Lavandier.</figcaption></figure>
-</div>''', n=3, head="La firma")
-
-# 4 · Tradición y visión + campaña
-page(f'''{h("Nuestra perspectiva", "Tradición civilista, visión internacional")}
-<div class="duo">{"".join(f'<figure><div class="ph"><img src="../{img}" alt=""></div><figcaption><p class="kicker">{e(k)}</p><h3>{e(t)}</h3><p>{e(p)}</p></figcaption></figure>' for img, k, t, p in dual)}</div>
-<figure class="campaign"><img src="../assets/campana-abogados-especializados.jpg" alt=""><figcaption>Campaña institucional «Abogados especializados».</figcaption></figure>''', n=4, head="La firma")
+</div>
+<div class="duo-mini">{"".join(f'<div><p class="kicker">{e(k)}</p><h3>{e(t)}</h3><p>{e(p)}</p></div>' for img, k, t, p in dual)}</div>''', n=3, head="La firma")
 
 # 5–9 · Áreas de práctica (2 por página)
 def area_block(t, i):
@@ -196,12 +193,12 @@ for k in range(5):
     pair = tiles[2 * k: 2 * k + 2]
     top = h("Áreas de práctica", "Lo que hacemos") + f'<p class="intro">{e(areas_intro)}</p>' if k == 0 else ""
     page(f'{top}<div class="areas{" first" if k == 0 else ""}">{"".join(area_block(t, 2 * k + j + 1) for j, t in enumerate(pair))}</div>',
-         n=5 + k, head="Áreas de práctica")
+         n=4 + k, head="Áreas de práctica")
 
 # 10 · Fideicomisos
 page(f'''{h("Ley 189-11", fid_title)}<p class="intro">{e(fid_intro)}</p>
 <div class="trusts">{"".join(f'<article><div class="ph"><img src="../{t["img"]}" alt=""></div><div><span class="n">{e(t["n"])}</span><h3>Fideicomiso {e(t["name"].lower())}</h3><p>{e(t["desc"])}</p></div></article>' for t in trusts)}</div>
-<p class="note">ESLA publica en su sitio web un texto consolidado no oficial de la Ley 189-11, con todas sus modificaciones, para consulta de clientes.</p>''', n=10, head="Fideicomisos")
+<p class="note">ESLA publica en su sitio web un texto consolidado no oficial de la Ley 189-11, con todas sus modificaciones, para consulta de clientes.</p>''', n=9, head="Fideicomisos")
 
 
 # 11 · Socios
@@ -215,20 +212,37 @@ def cv_html(cv):
 socios = groups["Socios"]
 page(f'''{h("Nuestro equipo", "Socios")}<p class="intro">{e(team_intro)}</p>
 <div class="partners">{"".join(f'<article><div class="portrait"><img src="../{p["img"]}" alt=""></div><div class="pb"><h3>{e(p["name"])}</h3><p class="role">{e(p["role"])}</p><p>{e(p["bio"])}</p>{cv_html(p["cv"])}</div></article>' for p in socios)}</div>''',
-     n=11, head="Nuestro equipo")
+     n=10, head="Nuestro equipo")
 
 # 12 · Asociados
 asoc = groups["Asociados"]
 page(f'''{h("Nuestro equipo", "Asociados")}
 <div class="assoc">{"".join(f'<article><div class="portrait"><img src="../{p["img"]}" alt=""></div><div class="pb"><h3>{e(p["name"])}</h3><p class="role">{e(p["role"])}</p><p>{e(p["bio"])}</p>{cv_html([c for c in p["cv"] if c[0] in ("Formación", "Correo")])}</div></article>' for p in asoc)}</div>''',
-     n=12, head="Nuestro equipo")
+     n=11, head="Nuestro equipo")
 
 # 13 · El equipo + responsables
 eq = groups["El equipo"]
 page(f'''{h("Nuestro equipo", "El equipo")}
 <div class="staff">{"".join(f'<article><div class="portrait"><img src="../{p["img"]}" alt=""></div><div class="pb"><h3>{e(p["name"])}</h3><p class="role">{e(p["role"])}</p>{cv_html(p["cv"])}</div></article>' for p in eq)}</div>
 <h2 class="h2-small">Responsables por área</h2>
-<table class="leads">{"".join(f'<tr><th>{e(a)}</th><td>{e(b)}</td></tr>' for a, b in leads)}</table>''', n=13, head="Nuestro equipo")
+<table class="leads">{"".join(f'<tr><th>{e(a)}</th><td>{e(b)}</td></tr>' for a, b in leads)}</table>''', n=12, head="Nuestro equipo")
+
+# 13 · Aliada en Estados Unidos
+ally = groups["Aliada en Estados Unidos"][0]
+ally_services = next(items for dt, items in ally["cv"] if dt.startswith("Servicios"))
+ally_addr = next(items for dt, items in ally["cv"] if dt == "Dirección")[0]
+ally_tel = next(items for dt, items in ally["cv"] if dt == "Teléfono")[0]
+ally_portrait = (f'<img src="../{ally["img"]}" alt="">' if ally["img"] else '<span class="initials">FJ</span>')
+page(f'''{h("Presencia internacional", "Aliada en Estados Unidos")}
+<p class="intro">Para los clientes y las familias dominicanas que viven en los Estados Unidos, ESLA cuenta con una aliada en Filadelfia, Pensilvania, que coordina con la firma los asuntos que deben resolverse en la República Dominicana.</p>
+<div class="ally">
+  <div class="portrait">{ally_portrait}</div>
+  <div class="pb"><h3>{e(ally["name"])}</h3><p class="role">{e(ally["role"])}</p><p>{e(ally["bio"])}</p>
+  <dl><dt>Dirección</dt><dd>{e(ally_addr)}</dd><dt>Teléfono</dt><dd>{e(ally_tel)}</dd></dl></div>
+</div>
+<h2 class="h2-small">Servicios en Filadelfia</h2>
+<ul class="ally-services">{"".join(f"<li>{e(x)}</li>" for x in ally_services)}</ul>
+<div class="box"><p>{e(ally["note"])}</p></div>''', n=13, head="Aliada en Estados Unidos")
 
 # 14 · Prensa y reconocimientos
 page(f'''{h("Publicaciones y prensa", "Prensa y reconocimientos")}
@@ -280,6 +294,7 @@ page(f'''{h("Hablemos", "Contacto")}
     <dt>Correo</dt><dd>info@eslard.com</dd>
     <dt>Horario</dt><dd>Lunes a viernes, 8:30 a. m. – 5:00 p. m.</dd>
     <dt>Sitio web e Instagram</dt><dd>www.eslard.com · @esla_rd</dd>
+    <dt>Aliada en Filadelfia (EE. UU.)</dt><dd>Franny Jerez Morales · 7810 Castor Avenue, Philadelphia, PA 19152 · +1 (215) 618-7514</dd>
   </dl>
   <div class="qrs">
     <figure><div class="qr">{qr(WA, 4)}</div><figcaption>WhatsApp</figcaption></figure>
@@ -292,6 +307,7 @@ page(f'''{h("Hablemos", "Contacto")}
 page(f'''<div class="back">
   <div class="back-brand">{mark}<div><b>ESLA</b><span>Abogados Consultores</span></div></div>
   <p class="back-line">Av. Abraham Lincoln No. 605, Naco, Santo Domingo · +1 (809) 960-2992 · info@eslard.com · www.eslard.com</p>
+  <p class="back-line small">Aliada en Filadelfia (EE. UU.): 7810 Castor Avenue, Philadelphia, PA 19152 · +1 (215) 618-7514</p>
   <div class="back-small">
     <p>La información de este documento es general y no constituye asesoría legal. El contacto con la firma no crea una relación abogado-cliente hasta que el encargo se formaliza por escrito. Las referencias legislativas están actualizadas a {EDICION.lower()}; la versión con valor legal es la publicada en la Gaceta Oficial.</p>
     <p><b>Créditos fotográficos.</b> Fotografías del equipo y la oficina: ESLA Abogados Consultores. Demás imágenes, con licencia Creative Commons vía Openverse/Flickr: {e("; ".join(credits))}.</p>
