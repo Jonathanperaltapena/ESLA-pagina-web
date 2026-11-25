@@ -5,7 +5,7 @@ const { chromium } = require(process.env.PW || 'playwright');
 (async () => {
   const which = process.argv[2] || 'cuadros';
   const dir = path.resolve(__dirname, which);
-  const vp = which === 'reel' ? { width: 1080, height: 1920 } : { width: 1920, height: 1080 };
+  const vp = which.startsWith('reel') ? { width: 1080, height: 1920 } : { width: 1920, height: 1080 };
   const names = fs.readFileSync(path.join(dir, 'lista.txt'), 'utf8').trim().split('\n');
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: vp, deviceScaleFactor: 1.5 });

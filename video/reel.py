@@ -109,7 +109,7 @@ def build_html():
 <h1 style="margin-top:110px">Agende su consulta</h1><div class="rule"></div>
 <p class="kicker" style="margin-top:10px">WhatsApp</p><p class="big">+1 (829) 539-3700</p>
 <ul class="list" style="margin-top:26px"><li>+1 (809) 960-2992</li><li>info@eslard.com</li><li>Av. Abraham Lincoln No. 605, Naco, Santo Domingo</li><li>@esla_rd · www.eslard.com</li></ul>
-<p class="small" style="margin-top:auto">Contenido informativo; no constituye asesoría legal. Música original compuesta para ESLA. © 2026 ESLA Abogados Consultores, SRL.</p></div>''',
+<p class="small" style="margin-top:auto">Contenido informativo; no constituye asesoría legal. © 2026 ESLA Abogados Consultores, SRL.</p></div>''',
         ".big{font:400 92px/1.05 Barlow;color:#fff;margin-top:10px}.list li{font-size:34px}")
     for name in SCENES:
         (OUT / f"{name}.html").write_text(pages[name], encoding="utf-8")
@@ -176,14 +176,11 @@ def frame(n):
 
 
 def montaje():
-    music, mdur = build_music()
-    print(f"música {mdur:.1f} s · video {TOTAL:.1f} s")
     nframes = int(round(TOTAL * FPS))
     out = ROOT / "ESLA-reel-instagram.mp4"
     cmd = ["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-           "-i", str(music), "-filter:a", f"atrim=0:{TOTAL},afade=t=out:st={TOTAL - 1.5}:d=1.5,loudnorm=I=-14:TP=-1.5:LRA=11",
-           "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-c:v", "libx264", "-preset", "medium", "-crf", "19",
-           "-pix_fmt", "yuv420p", "-profile:v", "high", "-movflags", "+faststart", "-shortest", str(out)]
+           "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "19",
+           "-pix_fmt", "yuv420p", "-profile:v", "high", "-movflags", "+faststart", str(out)]
     ff = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     with Pool(4) as pool:
         for buf in pool.imap(frame, range(nframes), chunksize=8):
