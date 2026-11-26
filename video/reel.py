@@ -102,7 +102,7 @@ def build_html():
 <div class="row"><div class="photo" style="width:400px;height:500px;flex:none"><img src="{a("fjerez.jpg")}"></div>
 <div><h3>Franny Jerez Morales</h3><p class="role">Aliada comercial</p><p class="txt">Apoyo migratorio y documental para la comunidad dominicana, en coordinación con ESLA.</p></div></div>
 <ul class="list" style="margin-top:36px"><li>7810 Castor Avenue, Philadelphia, PA 19152</li><li>+1 (215) 618-7514</li></ul>
-<p class="small" style="margin-top:22px">La Sra. Jerez Morales no es abogada y no ofrece asesoría legal. ESLA ejerce el derecho únicamente en la República Dominicana.</p></div>''',
+<p class="small" style="margin-top:22px">La Sra. Jerez Morales no ejerce la abogacía ni presta asesoría legal. ESLA ejerce el derecho en la República Dominicana.</p></div>''',
         ".row{display:flex;gap:36px;align-items:flex-start}.row h3{font:500 44px/1.15 Barlow;color:#fff}"
         ".role{font:700 20px/1.4 Manrope;letter-spacing:.18em;text-transform:uppercase;color:#D9B48C;margin:10px 0 18px}.txt{font:300 32px/1.4 Barlow}")
     pages["cierre"] = doc(f'''<div class="safe"><div class="brand">{MARK}<div><b>ESLA</b><span>Abogados Consultores</span></div></div>

@@ -211,3 +211,4 @@ dd { margin: 0.02in 0 0; color: var(--text); }
 .ally-services li { break-inside: avoid; position: relative; padding-left: 0.16in; margin-bottom: 0.07in; color: var(--navy); font-size: 9.4pt; }
 .ally-services li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 0.09in; height: 0.8pt; background: var(--gold); }
 .back-line.small { margin-top: 0.08in; font-size: 8pt; color: #B4BBCB; }
+.ally-note { margin-top: 0.22in; font-size: 8.4pt; font-style: italic; color: var(--muted); }

@@ -93,8 +93,7 @@ for title, block in re.findall(r'<h3 class="sub-title"[^>]*>(.*?)</h3>\s*<div cl
                            bio=es(one(r"</div>\s*</div>\s*<p>(.*?)</p>", art)), cv=cv,
                            note=es(one(r'<p class="ally-note">(.*?)</p>', art))))
     groups[es(title)] = people
-leads = [(es(a), es(b).replace(" Lic.", " · Lic.")) for a, b in re.findall(r"<li><span>(<span lang.*?</span>)</span><span>(.*?)</span></li>", team_sec[team_sec.index("areas-lead"):])]
-leads = [(a, re.sub(r"<br>", " y ", b)) for a, b in leads]
+leads = [(es(a), es(re.sub(r"<br>", " y ", b))) for a, b in re.findall(r"<li><span>(<span lang.*?</span>)</span><span>(.*?)</span></li>", team_sec[team_sec.index("areas-lead"):])]
 
 news_sec = section("noticias")
 press = dict(
@@ -242,7 +241,7 @@ page(f'''{h("Presencia internacional", "Aliada en Estados Unidos")}
 </div>
 <h2 class="h2-small">Servicios en Filadelfia</h2>
 <ul class="ally-services">{"".join(f"<li>{e(x)}</li>" for x in ally_services)}</ul>
-<div class="box"><p>{e(ally["note"])}</p></div>''', n=13, head="Aliada en Estados Unidos")
+<p class="ally-note">{e(ally["note"])}</p>''', n=13, head="Aliada en Estados Unidos")
 
 # 14 · Prensa y reconocimientos
 page(f'''{h("Publicaciones y prensa", "Prensa y reconocimientos")}
